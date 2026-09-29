@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="jgz-bds-ervaren-gezondheid" />
+  <text>
+    <status value="empty" />
+    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+  </text>
+  <url value="http://nictiz.nl/fhir/ValueSet/jgz-bds-ervaren-gezondheid" />
+  <version value="0.1.0" />
+  <name value="Ervaren gezondheid" />
+  <title value="Ervaren gezondheid" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Waardelijst behorend bij BDS element 514 Ervaren gezondheid uit de Basisdataset JGZ." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <compose>
+    <include>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-ervaren-gezondheid" />
+    </include>
+  </compose>
+</ValueSet>

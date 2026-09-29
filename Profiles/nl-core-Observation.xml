@@ -1,0 +1,573 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-Observation"/>
+  <text>
+    <status value="empty"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
+    <valueCanonical value="http://hl7.eu/fhir/base/StructureDefinition/medicalTestResult-eu-core"/>
+  </extension>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Observation"/>
+  <version value="0.0.1"/>
+  <name value="NlcoreObservation"/>
+  <title value="nl core Observation"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-09-29"/>
+  <publisher value="Nictiz"/>
+  <contact>
+    <name value="Nictiz"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nictiz.nl"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="**PRE-ALFA MOCK-UP – NIET VOOR IMPLEMENTATIE.** Eerste concept (versie 0.0.1), opgesteld om de aanpak met generieke bouwstenen (GBB) voor Observation te toetsen aan de Basisdataset JGZ (BDS). De inhoud, canonieke URL, naamgeving en afhankelijkheden kunnen zonder voorafgaande kennisgeving worden gewijzigd.&#10;&#10;Generiek profiel op Observation voor bevindingen, metingen, beoordelingen en scores over een patiënt (of de context van de patiënt) op een bepaald moment of gedurende een bepaalde periode. Gebruikscasusonafhankelijk: de BDS JGZ is de eerste dataset waarmee dit profiel wordt getest. Het ondersteunt drie patronen: één afzonderlijke Observation, een Observation met `component`s (scores, instrumenten en meetkwalificaties) en een groeperende (&quot;panel&quot;-)Observation die met `hasMember` naar afzonderlijke Observations verwijst."/>
+  <purpose value="**PRE-ALFA MOCK-UP – NIET VOOR IMPLEMENTATIE.** Eerste concept (versie 0.0.1), opgesteld om de aanpak met generieke bouwstenen (GBB) voor Observation te toetsen aan de Basisdataset JGZ (BDS). De inhoud, canonieke URL, naamgeving en afhankelijkheden kunnen zonder voorafgaande kennisgeving worden gewijzigd.&#10;&#10;Dit profiel is de FHIR-implementatie van de generieke bouwsteen Observation (er bestaan nog geen informatie-eisen of logisch model (afsprakenmodel)). Het verklaart conformiteit met het EU-kernprofiel [medicalTestResult-eu-core](http://hl7.eu/fhir/base/StructureDefinition/medicalTestResult-eu-core) met behulp van de extensie compliesWithProfile; de beperkingen van dat profiel zijn handmatig toegepast (Nictiz-richtlijnen voor profilering, §2.1.2.1)."/>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+  <fhirVersion value="4.0.1"/>
+  <mapping>
+    <identity value="xt-ehr-EHDSObservation"/>
+    <uri value="http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSObservation"/>
+    <name value="Xt-EHR EHDS logical information model EHDSObservation"/>
+    <comment value="Mapping to the EHDS logical model EHDSObservation (package xtehr.eu.ehds.models, FHIR R5 logical model). Temporary: in the GBB approach this SHOULD become the mapping to the requirements (requirements-Observation) and the afsprakenmodel (lm-Observation) once these exist."/>
+  </mapping>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Observation"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Observation">
+      <path value="Observation"/>
+      <short value="Observation"/>
+      <definition value="A finding, measurement, assessment or score about the patient, or about the context of the patient, made at a point or period in time."/>
+      <comment value="Three patterns are supported (Nictiz profiling guidelines §11.1.1 and §11.1.2):&#10;&#10;* **single Observation**: `code` identifies the concept, `value[x]` holds the result;&#10;* **Observation with components**: for scores, questionnaires/instruments and measurement qualifiers that cannot be interpreted on their own (e.g. SDQ, BFMT, blood pressure). The root `code` identifies the instrument or total score, each `component.code` a part;&#10;* **grouping Observation (panel)**: parts that can be interpreted on their own are separate Observations referenced from `hasMember` (e.g. Van Wiechen items).&#10;&#10;Qualifiers of a measurement are placed on `method` and `bodySite` when possible, otherwise on `component`. Free-text explanations of a result are placed on `note`."/>
+      <constraint>
+        <key value="obs-value-1"/>
+        <requirements value="Copied from medicalTestResult-eu-core (compliesWithProfile)."/>
+        <severity value="error"/>
+        <human value="The elements Observation.extension:value-r5 and Observation.value[x] SHALL not be used simultaneously."/>
+        <expression value="value.empty() or extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value').empty()"/>
+      </constraint>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation"/>
+      </mapping>
+    </element>
+    <element id="Observation.language">
+      <path value="Observation.language"/>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.header.language"/>
+      </mapping>
+    </element>
+    <element id="Observation.extension:bodyStructure">
+      <path value="Observation.extension"/>
+      <sliceName value="bodyStructure"/>
+      <short value="Body structure (R5 backport)"/>
+      <comment value="Applied from medicalTestResult-eu-core. Use `bodySite` for a coded body site/laterality; this extension references a BodyStructure resource when more detail is needed."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.bodyStructure"/>
+      </type>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.bodySite"/>
+      </mapping>
+    </element>
+    <element id="Observation.extension:triggeredBy">
+      <path value="Observation.extension"/>
+      <sliceName value="triggeredBy"/>
+      <short value="Triggering observation (R5 backport)"/>
+      <comment value="Applied from medicalTestResult-eu-core. No counterpart in the current EHDSObservation model (triggeredBy is commented out in the Xt-EHR source)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy"/>
+      </type>
+    </element>
+    <element id="Observation.extension:triggeredBy.extension:observation">
+      <path value="Observation.extension.extension"/>
+      <sliceName value="observation"/>
+    </element>
+    <element id="Observation.extension:triggeredBy.extension:observation.value[x]">
+      <path value="Observation.extension.extension.value[x]"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Observation"/>
+      </type>
+    </element>
+    <element id="Observation.extension:value-r5">
+      <path value="Observation.extension"/>
+      <sliceName value="value-r5"/>
+      <short value="Attachment result (R5 backport)"/>
+      <definition value="Result of type Attachment (e.g. a scanned form or picture). FHIR R4 Observation.value[x] does not allow Attachment; the R5 element is pre-adopted using the cross-version extension."/>
+      <comment value="Applied from medicalTestResult-eu-core. Note: the context of this cross-version extension in hl7.fhir.uv.xver-r5.r4 is `Observation.value[x]`, while eu-core (and therefore this profile) places it on `Observation`. See open issues."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value"/>
+      </type>
+    </element>
+    <element id="Observation.extension:value-r5.value[x]">
+      <path value="Observation.extension.value[x]"/>
+      <type>
+        <code value="Attachment"/>
+      </type>
+    </element>
+    <element id="Observation.identifier">
+      <path value="Observation.identifier"/>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.header.identifier"/>
+      </mapping>
+    </element>
+    <element id="Observation.basedOn">
+      <path value="Observation.basedOn"/>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.order"/>
+      </mapping>
+    </element>
+    <element id="Observation.status">
+      <path value="Observation.status"/>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.header.status"/>
+      </mapping>
+    </element>
+    <element id="Observation.category">
+      <path value="Observation.category"/>
+      <comment value="At least one category is required by medicalTestResult-eu-core. Use the HL7 observation-category codes where possible (e.g. `exam`, `vital-signs`, `survey`, `social-history`, `laboratory`). EHDSObservation has no counterpart."/>
+      <min value="1"/>
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code"/>
+      <short value="Observation type"/>
+      <definition value="Code identifying the kind of observation: what was observed, measured, assessed or scored."/>
+      <comment value="For data from the Basisdataset JGZ, use the BDS element number (code system BDS ElementID, `urn:oid:2.16.840.1.113883.2.4.4.40.267`) or, for grouping and instrument observations without a BDS element, the BDS rubriek code (`urn:oid:2.16.840.1.113883.2.4.4.40.391`). When a LOINC or SNOMED CT code is known, it is sent as an additional `coding` with the same meaning. See the additional binding."/>
+      <binding>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="key">
+            <valueId value="bds-jgz-observation-code"/>
+          </extension>
+          <extension url="purpose">
+            <valueCode value="preferred"/>
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="http://nictiz.nl/fhir/ValueSet/jgz-BdsObservationCodes"/>
+          </extension>
+          <extension url="documentation">
+            <valueMarkdown value="BDS JGZ element codes (code system *BDS ElementID*, 2.16.840.1.113883.2.4.4.40.267) and BDS rubriek codes (*BDS RubriekID*, 2.16.840.1.113883.2.4.4.40.391) that identify the kind of observation for data from the Basisdataset JGZ. This binding is additional to, and does not replace, the base binding. When a LOINC or SNOMED CT code is known for the BDS element it SHOULD be sent as an additional coding."/>
+          </extension>
+        </extension>
+        <strength value="example"/>
+        <description value="Codes identifying names of simple observations."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/observation-codes"/>
+      </binding>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.type"/>
+      </mapping>
+    </element>
+    <element id="Observation.code.text">
+      <path value="Observation.code.text"/>
+      <comment value="Used for the original (conventional) name of the observation as used in the source system."/>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.originalName"/>
+      </mapping>
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject"/>
+      <comment value="Required by medicalTestResult-eu-core. For data about a parent (e.g. height of the biological mother) the subject remains the patient; the parent is referenced from `focus`."/>
+      <min value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"/>
+      </type>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.header.subject"/>
+      </mapping>
+    </element>
+    <element id="Observation.focus">
+      <path value="Observation.focus"/>
+      <comment value="Target types restricted to those allowed by medicalTestResult-eu-core."/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Substance"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactPerson"/>
+      </type>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.header.directSubject[x]"/>
+      </mapping>
+    </element>
+    <element id="Observation.encounter">
+      <path value="Observation.encounter"/>
+      <comment value="TEMPORARY CHOICE FOR THE MOCK-UP: `jgz-dob-Encounter` is a use case specific profile and according to the layering in §2.1 belongs in a derived JGZ profile. It is added here only to test the linking of observations to the JGZ contact moment (BDS R018 Activiteit). Intended end state: a generic Encounter building block as target here, and jgz-dob-Encounter in the derived JGZ profile. EHDSObservation has no encounter element."/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/jgz-dob-Encounter"/>
+      </type>
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]"/>
+      <comment value="Required and restricted to dateTime or Period by medicalTestResult-eu-core."/>
+      <min value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="Period"/>
+      </type>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.observationDate[x]"/>
+      </mapping>
+    </element>
+    <element id="Observation.issued">
+      <path value="Observation.issued"/>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.header.date"/>
+      </mapping>
+    </element>
+    <element id="Observation.performer">
+      <path value="Observation.performer"/>
+      <comment value="Target types restricted to those allowed by medicalTestResult-eu-core (CareTeam removed). Each occurrence of a health professional is normally represented by a PractitionerRole (nl-core-HealthProfessional-PractitionerRole) that references the Practitioner (§11.2.2)."/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactPerson"/>
+      </type>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.performer[x]"/>
+      </mapping>
+    </element>
+    <element id="Observation.performer.extension:performerFunction">
+      <path value="Observation.performer.extension"/>
+      <sliceName value="performerFunction"/>
+      <comment value="Applied from medicalTestResult-eu-core."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/event-performerFunction"/>
+      </type>
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]"/>
+      <slicing>
+        <discriminator>
+          <type value="type"/>
+          <path value="$this"/>
+        </discriminator>
+        <ordered value="false"/>
+        <rules value="open"/>
+      </slicing>
+      <comment value="Not restricted (open world). The BDS JGZ requires Quantity, CodeableConcept, string, boolean, integer and dateTime; EHDSObservation lists string, Quantity, Range, Ratio and CodeableConcept (&quot;other data types can be used as well&quot;)."/>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.result.value[x]"/>
+      </mapping>
+    </element>
+    <element id="Observation.value[x]:valueQuantity">
+      <path value="Observation.value[x]"/>
+      <sliceName value="valueQuantity"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+    </element>
+    <element id="Observation.value[x]:valueQuantity.extension:uncertainty">
+      <path value="Observation.value[x].extension"/>
+      <sliceName value="uncertainty"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-uncertainty"/>
+      </type>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.result.uncertainty"/>
+      </mapping>
+    </element>
+    <element id="Observation.dataAbsentReason">
+      <path value="Observation.dataAbsentReason"/>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.result.dataAbsentReason"/>
+      </mapping>
+    </element>
+    <element id="Observation.interpretation">
+      <path value="Observation.interpretation"/>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.interpretation"/>
+      </mapping>
+    </element>
+    <element id="Observation.note">
+      <path value="Observation.note"/>
+      <comment value="EHDSObservation.note is 0..1; this profile does not restrict the cardinality (open world)."/>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.note"/>
+      </mapping>
+    </element>
+    <element id="Observation.bodySite">
+      <path value="Observation.bodySite"/>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.bodySite"/>
+      </mapping>
+    </element>
+    <element id="Observation.method">
+      <path value="Observation.method"/>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.method"/>
+      </mapping>
+    </element>
+    <element id="Observation.specimen">
+      <path value="Observation.specimen"/>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.specimen"/>
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange">
+      <path value="Observation.referenceRange"/>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.referenceRange"/>
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange.low">
+      <path value="Observation.referenceRange.low"/>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.referenceRange.low"/>
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange.high">
+      <path value="Observation.referenceRange.high"/>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.referenceRange.high"/>
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange.type">
+      <path value="Observation.referenceRange.type"/>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.referenceRange.type"/>
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange.appliesTo">
+      <path value="Observation.referenceRange.appliesTo"/>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.referenceRange.appliesTo"/>
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange.age">
+      <path value="Observation.referenceRange.age"/>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.referenceRange.age"/>
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange.text">
+      <path value="Observation.referenceRange.text"/>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.referenceRange.text"/>
+      </mapping>
+    </element>
+    <element id="Observation.hasMember">
+      <path value="Observation.hasMember"/>
+      <comment value="Used for grouping (&quot;panel&quot;) Observations. Target types restricted to Observation because medicalTestResult-eu-core only allows (its own profile on) Observation; the R4 base also allows QuestionnaireResponse and MolecularSequence."/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Observation"/>
+      </type>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.hasMember[x]"/>
+      </mapping>
+    </element>
+    <element id="Observation.derivedFrom">
+      <path value="Observation.derivedFrom"/>
+      <comment value="E.g. calculated values (BMI, growth chart SDS, total scores) refer to the source measurements. Target types restricted to those allowed by medicalTestResult-eu-core (Observation, ImagingStudy); the R4 base also allows DocumentReference, Media, QuestionnaireResponse and MolecularSequence."/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImagingStudy"/>
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Observation"/>
+      </type>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.derivedFrom[x]"/>
+      </mapping>
+    </element>
+    <element id="Observation.component">
+      <path value="Observation.component"/>
+      <comment value="Used for parts of scores/instruments and for measurement qualifiers that cannot be mapped on `method` or `bodySite` (§11.1.2)."/>
+      <constraint>
+        <key value="obs-value-2"/>
+        <requirements value="Copied from medicalTestResult-eu-core (compliesWithProfile)."/>
+        <severity value="error"/>
+        <human value="The elements Observation.component.extension:value-r5 and Observation.component.value[x] SHALL not be used simultaneously."/>
+        <expression value="value.empty() or extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.component.value').empty()"/>
+      </constraint>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.component"/>
+      </mapping>
+    </element>
+    <element id="Observation.component.extension:value-r5">
+      <path value="Observation.component.extension"/>
+      <sliceName value="value-r5"/>
+      <short value="Attachment result (R5 backport)"/>
+      <comment value="Applied from medicalTestResult-eu-core."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.component.value"/>
+      </type>
+    </element>
+    <element id="Observation.component.extension:value-r5.value[x]">
+      <path value="Observation.component.extension.value[x]"/>
+      <type>
+        <code value="Attachment"/>
+      </type>
+    </element>
+    <element id="Observation.component.code">
+      <path value="Observation.component.code"/>
+      <comment value="For BDS JGZ data: the BDS element number (code system BDS ElementID). See the additional binding."/>
+      <binding>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="key">
+            <valueId value="bds-jgz-observation-code"/>
+          </extension>
+          <extension url="purpose">
+            <valueCode value="preferred"/>
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="http://nictiz.nl/fhir/ValueSet/jgz-BdsObservationCodes"/>
+          </extension>
+          <extension url="documentation">
+            <valueMarkdown value="BDS JGZ element codes (code system *BDS ElementID*, 2.16.840.1.113883.2.4.4.40.267) and BDS rubriek codes (*BDS RubriekID*, 2.16.840.1.113883.2.4.4.40.391) that identify the kind of observation for data from the Basisdataset JGZ. This binding is additional to, and does not replace, the base binding. When a LOINC or SNOMED CT code is known for the BDS element it SHOULD be sent as an additional coding."/>
+          </extension>
+        </extension>
+        <strength value="example"/>
+        <description value="Codes identifying names of simple observations."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/observation-codes"/>
+      </binding>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.component.type"/>
+      </mapping>
+    </element>
+    <element id="Observation.component.code.text">
+      <path value="Observation.component.code.text"/>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.component.originalName"/>
+      </mapping>
+    </element>
+    <element id="Observation.component.value[x]">
+      <path value="Observation.component.value[x]"/>
+      <slicing>
+        <discriminator>
+          <type value="type"/>
+          <path value="$this"/>
+        </discriminator>
+        <ordered value="false"/>
+        <rules value="open"/>
+      </slicing>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.component.result.value[x]"/>
+      </mapping>
+    </element>
+    <element id="Observation.component.value[x]:valueQuantity">
+      <path value="Observation.component.value[x]"/>
+      <sliceName value="valueQuantity"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+    </element>
+    <element id="Observation.component.value[x]:valueQuantity.extension:uncertainty">
+      <path value="Observation.component.value[x].extension"/>
+      <sliceName value="uncertainty"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-uncertainty"/>
+      </type>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.component.result.uncertainty"/>
+      </mapping>
+    </element>
+    <element id="Observation.component.dataAbsentReason">
+      <path value="Observation.component.dataAbsentReason"/>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.component.result.dataAbsentReason"/>
+      </mapping>
+    </element>
+    <element id="Observation.component.interpretation">
+      <path value="Observation.component.interpretation"/>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.component.interpretation"/>
+      </mapping>
+    </element>
+    <element id="Observation.component.referenceRange">
+      <path value="Observation.component.referenceRange"/>
+      <mapping>
+        <identity value="xt-ehr-EHDSObservation"/>
+        <map value="EHDSObservation.component.referenceRange"/>
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="jgz-dob-Encounter-jgz-01"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/jgz-dob-Encounter"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <tbody>
+          <tr>
+            <th>Activiteit ID</th>
+            <td>urn:uuid:5b0d0f36-3a2e-4c1f-9d6b-2f1e8c7a4b90</td>
+          </tr>
+          <tr>
+            <th>Status</th>
+            <td>finished</td>
+          </tr>
+          <tr>
+            <th>Vorm (FHIR class)</th>
+            <td>AMB</td>
+          </tr>
+          <tr>
+            <th>Soort activiteit</th>
+            <td>Contact 1 tot 4 jaar</td>
+          </tr>
+          <tr>
+            <th>Jeugdige</th>
+            <td>Jeugdige (voorbeeld)</td>
+          </tr>
+          <tr>
+            <th>Datum activiteit</th>
+            <td>12-03-2026 10:30</td>
+          </tr>
+          <tr>
+            <th>Uitvoerende</th>
+            <td>Jeugdarts (voorbeeld)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:5b0d0f36-3a2e-4c1f-9d6b-2f1e8c7a4b90"/>
+  </identifier>
+  <status value="finished"/>
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+    <code value="AMB"/>
+    <display value="ambulatory"/>
+  </class>
+  <type>
+    <coding>
+      <system value="urn:oid:2.16.840.1.113883.2.4.4.40.308"/>
+      <code value="39"/>
+      <display value="Contact 1 tot 4 jaar"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/nl-core-Patient-jgz-01"/>
+    <display value="Jeugdige (voorbeeld)"/>
+  </subject>
+  <participant>
+    <individual>
+      <reference value="PractitionerRole/nl-core-HealthProfessional-PractitionerRole-jgz-01"/>
+      <display value="Jeugdarts (voorbeeld)"/>
+    </individual>
+  </participant>
+  <period>
+    <start value="2026-03-12T10:30:00+01:00"/>
+  </period>
+</Encounter>

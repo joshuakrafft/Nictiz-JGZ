@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="2.16.840.1.113883.2.4.4.40.391"/>
+  <text>
+    <status value="empty"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+  </text>
+  <url value="urn:oid:2.16.840.1.113883.2.4.4.40.391"/>
+  <version value="0.0.1"/>
+  <name value="BDSRubriekID"/>
+  <title value="BDS RubriekID"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-09-29"/>
+  <publisher value="Nictiz"/>
+  <contact>
+    <name value="Nictiz"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nictiz.nl"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="**PRE-ALFA MOCK-UP – NIET VOOR IMPLEMENTATIE.** Eerste concept (versie 0.0.1), opgesteld om de aanpak met generieke bouwstenen (GBB) voor Observation te toetsen aan de Basisdataset JGZ (BDS). De inhoud, canonical URL, naamgeving en afhankelijkheden kunnen zonder voorafgaande kennisgeving worden gewijzigd.&#10;&#10;Stub (inhoud = fragment) van het codesysteem BDS RubriekID, overgenomen uit waardelijst W0639 RubriekID (HL7) in de ART-DECOR-export van de Basisdataset JGZ (BDS). Niet gezaghebbend."/>
+  <caseSensitive value="true"/>
+  <content value="fragment"/>
+  <concept>
+    <code value="R002"/>
+    <display value="Dossierinformatie"/>
+  </concept>
+  <concept>
+    <code value="R003"/>
+    <display value="Persoonsgegevens"/>
+  </concept>
+  <concept>
+    <code value="R005"/>
+    <display value="Betrokken JGZ-organisaties"/>
+  </concept>
+  <concept>
+    <code value="R006"/>
+    <display value="Huisarts"/>
+  </concept>
+  <concept>
+    <code value="R007"/>
+    <display value="Andere betrokken organisaties/hulpverleners"/>
+  </concept>
+  <concept>
+    <code value="R008"/>
+    <display value="Voor- of buitenschoolse voorzieningen/school"/>
+  </concept>
+  <concept>
+    <code value="R009"/>
+    <display value="Externe documenten"/>
+  </concept>
+  <concept>
+    <code value="R010"/>
+    <display value="Informatie over werkwijze JGZ"/>
+  </concept>
+  <concept>
+    <code value="R011"/>
+    <display value="Gezinssamenstelling"/>
+  </concept>
+  <concept>
+    <code value="R012"/>
+    <display value="Erfelijke belasting en ouderkenmerken"/>
+  </concept>
+  <concept>
+    <code value="R013"/>
+    <display value="Bedreigingen uit de directe omgeving"/>
+  </concept>
+  <concept>
+    <code value="R014"/>
+    <display value="Zwangerschap"/>
+  </concept>
+  <concept>
+    <code value="R015"/>
+    <display value="Bevalling"/>
+  </concept>
+  <concept>
+    <code value="R016"/>
+    <display value="Pasgeborene en eerste levensweken"/>
+  </concept>
+  <concept>
+    <code value="R018"/>
+    <display value="Activiteit"/>
+  </concept>
+  <concept>
+    <code value="R019"/>
+    <display value="Terugkerende anamnese"/>
+  </concept>
+  <concept>
+    <code value="R020"/>
+    <display value="Algemene indruk"/>
+  </concept>
+  <concept>
+    <code value="R021"/>
+    <display value="Functioneren"/>
+  </concept>
+  <concept>
+    <code value="R022"/>
+    <display value="Huid/haar/nagels"/>
+  </concept>
+  <concept>
+    <code value="R023"/>
+    <display value="Hoofd/hals"/>
+  </concept>
+  <concept>
+    <code value="R024"/>
+    <display value="Romp"/>
+  </concept>
+  <concept>
+    <code value="R025"/>
+    <display value="Bewegingsapparaat"/>
+  </concept>
+  <concept>
+    <code value="R026"/>
+    <display value="Genitalia/puberteitsontwikkeling"/>
+  </concept>
+  <concept>
+    <code value="R027"/>
+    <display value="Groei"/>
+  </concept>
+  <concept>
+    <code value="R030"/>
+    <display value="Psychosociaal en cognitief functioneren"/>
+  </concept>
+  <concept>
+    <code value="R031"/>
+    <display value="Motorisch functioneren"/>
+  </concept>
+  <concept>
+    <code value="R032"/>
+    <display value="Spraak- en taalontwikkeling"/>
+  </concept>
+  <concept>
+    <code value="R034"/>
+    <display value="Inschatten verhouding draaglast-draagkracht"/>
+  </concept>
+  <concept>
+    <code value="R035"/>
+    <display value="Ontvangen zorg"/>
+  </concept>
+  <concept>
+    <code value="R036"/>
+    <display value="Voorlichting, advies, instructie en begeleiding"/>
+  </concept>
+  <concept>
+    <code value="R037"/>
+    <display value="Hielprik pasgeborene"/>
+  </concept>
+  <concept>
+    <code value="R038"/>
+    <display value="Visus- en oogonderzoek"/>
+  </concept>
+  <concept>
+    <code value="R039"/>
+    <display value="Hartonderzoek"/>
+  </concept>
+  <concept>
+    <code value="R040"/>
+    <display value="Gehooronderzoek"/>
+  </concept>
+  <concept>
+    <code value="R041"/>
+    <display value="Rijksvaccinatieprogramma en andere vaccinaties"/>
+  </concept>
+  <concept>
+    <code value="R042"/>
+    <display value="Van Wiechen ontwikkelingsonderzoek"/>
+  </concept>
+  <concept>
+    <code value="R043"/>
+    <display value="BFMT"/>
+  </concept>
+  <concept>
+    <code value="R045"/>
+    <display value="SDQ"/>
+  </concept>
+  <concept>
+    <code value="R047"/>
+    <display value="Conclusies en vervolgstappen"/>
+  </concept>
+  <concept>
+    <code value="R048"/>
+    <display value="Zorgplan"/>
+  </concept>
+  <concept>
+    <code value="R049"/>
+    <display value="Screening logopedie"/>
+  </concept>
+  <concept>
+    <code value="R050"/>
+    <display value="Zorggegevens"/>
+  </concept>
+  <concept>
+    <code value="R051"/>
+    <display value="Niet-gespecificeerde gegevens"/>
+  </concept>
+  <concept>
+    <code value="R052"/>
+    <display value="Meldingen"/>
+  </concept>
+  <concept>
+    <code value="R054"/>
+    <display value="Screeningsinstrumenten"/>
+  </concept>
+</CodeSystem>

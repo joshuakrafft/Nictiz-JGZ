@@ -1,0 +1,1766 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="jgz-BdsObservationCodes"/>
+  <text>
+    <status value="empty"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+  </text>
+  <url value="http://nictiz.nl/fhir/ValueSet/jgz-BdsObservationCodes"/>
+  <version value="0.0.1"/>
+  <name value="JgzBdsObservationCodes"/>
+  <title value="BDS JGZ observatiecodes"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-09-29"/>
+  <publisher value="Nictiz"/>
+  <contact>
+    <name value="Nictiz"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.nictiz.nl"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="**PRE-ALFA MOCK-UP – NIET VOOR IMPLEMENTATIE.** Eerste concept (versie 0.0.1), opgesteld om de aanpak met generieke bouwstenen (GBB) voor Observation te toetsen aan de Basisdataset JGZ (BDS). De inhoud, canonical URL, naamgeving en afhankelijkheden kunnen zonder voorafgaande kennisgeving worden gewijzigd.&#10;&#10;Alle BDS JGZ-gegevenselementen (status definitief) die als een Observation of een Observation.component worden weergegeven, geïdentificeerd aan de hand van hun BDS-elementnummer (BDS ElementID, 2.16.840.1.113883.2.4.4.40.267), aangevuld met de BDS-rubriekcodes (BDS RubriekID, 2.16.840.1.113883.2.4.4.40.391) die worden gebruikt als code voor groeperings-/instrument-Observations. Gegenereerd op basis van de ART-DECOR-export van de Basisdataset JGZ (BDS) (dataset 2.16.840.1.113883.2.4.3.11.60.100.1.1, effectiveDate 2020-05-27, versionLabel 421). Elementen die zijn gekoppeld aan kwalificerende kenmerken (`method`, `bodySite`, `note`, `effective` en `performer`), elementen die niet meer actief zijn in de dataset en twijfelgevallen zijn niet opgenomen. 430 elementcodes en 3 rubriekcodes."/>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+  <compose>
+    <include>
+      <system value="urn:oid:2.16.840.1.113883.2.4.4.40.267"/>
+      <concept>
+        <code value="82"/>
+        <display value="Zwangerschapsduur"/>
+      </concept>
+      <concept>
+        <code value="91"/>
+        <display value="Roken tijdens de zwangerschap"/>
+      </concept>
+      <concept>
+        <code value="92"/>
+        <display value="Alcohol gebruik tijdens de zwangerschap"/>
+      </concept>
+      <concept>
+        <code value="93"/>
+        <display value="Drugsgebruik tijdens de zwangerschap"/>
+      </concept>
+      <concept>
+        <code value="97"/>
+        <display value="Duur bevalling"/>
+      </concept>
+      <concept>
+        <code value="98"/>
+        <display value="Duur uitdrijving"/>
+      </concept>
+      <concept>
+        <code value="100"/>
+        <display value="Ligging bij geboorte"/>
+      </concept>
+      <concept>
+        <code value="103"/>
+        <display value="Kleur vruchtwater"/>
+      </concept>
+      <concept>
+        <code value="105"/>
+        <display value="3 Navelvaten"/>
+      </concept>
+      <concept>
+        <code value="106"/>
+        <display value="Bijzonderheden bevalling"/>
+      </concept>
+      <concept>
+        <code value="107"/>
+        <display value="Bijzonderheden kraamperiode/kraamverzorging"/>
+      </concept>
+      <concept>
+        <code value="110"/>
+        <display value="Geboortegewicht"/>
+      </concept>
+      <concept>
+        <code value="111"/>
+        <display value="Laagste gewicht"/>
+      </concept>
+      <concept>
+        <code value="112"/>
+        <display value="Geboortelengte"/>
+      </concept>
+      <concept>
+        <code value="113"/>
+        <display value="Hoofdomtrek bij geboorte"/>
+      </concept>
+      <concept>
+        <code value="114"/>
+        <display value="Prematuur/serotien"/>
+      </concept>
+      <concept>
+        <code value="115"/>
+        <display value="Dysmatuur"/>
+      </concept>
+      <concept>
+        <code value="129"/>
+        <display value="Apgar score na 1 min"/>
+      </concept>
+      <concept>
+        <code value="130"/>
+        <display value="Apgar score na 5 min"/>
+      </concept>
+      <concept>
+        <code value="133"/>
+        <display value="Bijzonderheden temperatuurverloop"/>
+      </concept>
+      <concept>
+        <code value="134"/>
+        <display value="Bijzonderheden ademhaling"/>
+      </concept>
+      <concept>
+        <code value="135"/>
+        <display value="Bijzonderheden drinken"/>
+      </concept>
+      <concept>
+        <code value="145"/>
+        <display value="Bijzonderheden pasgeborene en eerste levensweken"/>
+      </concept>
+      <concept>
+        <code value="146"/>
+        <display value="A. femoralis rechts"/>
+      </concept>
+      <concept>
+        <code value="163"/>
+        <display value="Bijzonderheden huid/haar/nagels"/>
+      </concept>
+      <concept>
+        <code value="170"/>
+        <display value="Bijzonderheden hoofd"/>
+      </concept>
+      <concept>
+        <code value="174"/>
+        <display value="Bijzonderheden trommelvlies rechts"/>
+      </concept>
+      <concept>
+        <code value="175"/>
+        <display value="Bijzonderheden trommelvlies links"/>
+      </concept>
+      <concept>
+        <code value="176"/>
+        <display value="Bijzonderheden neus"/>
+      </concept>
+      <concept>
+        <code value="179"/>
+        <display value="Bijzonderheden mondgedrag"/>
+      </concept>
+      <concept>
+        <code value="184"/>
+        <display value="Bijzonderheden tonsillen"/>
+      </concept>
+      <concept>
+        <code value="188"/>
+        <display value="Poetsen gebit"/>
+      </concept>
+      <concept>
+        <code value="190"/>
+        <display value="Tandartsbezoek"/>
+      </concept>
+      <concept>
+        <code value="193"/>
+        <display value="Bijzonderheden gebit/kaak"/>
+      </concept>
+      <concept>
+        <code value="201"/>
+        <display value="Bijzonderheden thorax"/>
+      </concept>
+      <concept>
+        <code value="202"/>
+        <display value="Bijzonderheden longen"/>
+      </concept>
+      <concept>
+        <code value="206"/>
+        <display value="Lever"/>
+      </concept>
+      <concept>
+        <code value="207"/>
+        <display value="Milt"/>
+      </concept>
+      <concept>
+        <code value="209"/>
+        <display value="Bijzonderheden navel"/>
+      </concept>
+      <concept>
+        <code value="210"/>
+        <display value="Bijzonderheden lies rechts"/>
+      </concept>
+      <concept>
+        <code value="211"/>
+        <display value="Bijzonderheden lies links"/>
+      </concept>
+      <concept>
+        <code value="217"/>
+        <display value="Bijzonderheden wervelkolom"/>
+      </concept>
+      <concept>
+        <code value="219"/>
+        <display value="Bijzonderheden heupen"/>
+      </concept>
+      <concept>
+        <code value="221"/>
+        <display value="Bijzonderheden onderste extremiteiten"/>
+      </concept>
+      <concept>
+        <code value="223"/>
+        <display value="Bijzonderheden voet rechts"/>
+      </concept>
+      <concept>
+        <code value="228"/>
+        <display value="Bijzonderheden genitalia/puberteitsontwikkeling"/>
+      </concept>
+      <concept>
+        <code value="234"/>
+        <display value="Bijzonderheden groei"/>
+      </concept>
+      <concept>
+        <code value="235"/>
+        <display value="Lengte"/>
+      </concept>
+      <concept>
+        <code value="237"/>
+        <display value="Groeicurve lengte naar leeftijd"/>
+      </concept>
+      <concept>
+        <code value="238"/>
+        <display value="Lengte biologische moeder"/>
+      </concept>
+      <concept>
+        <code value="240"/>
+        <display value="Lengte biologische vader"/>
+      </concept>
+      <concept>
+        <code value="245"/>
+        <display value="Gewicht"/>
+      </concept>
+      <concept>
+        <code value="247"/>
+        <display value="Indruk JGZ professional gewicht/lengte"/>
+      </concept>
+      <concept>
+        <code value="248"/>
+        <display value="BMI"/>
+      </concept>
+      <concept>
+        <code value="252"/>
+        <display value="Hoofdomtrek"/>
+      </concept>
+      <concept>
+        <code value="253"/>
+        <display value="Groeicurve hoofdomtrek naar leeftijd"/>
+      </concept>
+      <concept>
+        <code value="276"/>
+        <display value="Bijzonderheden motorisch functioneren"/>
+      </concept>
+      <concept>
+        <code value="301"/>
+        <display value="Meertaligheid"/>
+      </concept>
+      <concept>
+        <code value="312"/>
+        <display value="Datum menarche"/>
+      </concept>
+      <concept>
+        <code value="313"/>
+        <display value="Ontwikkeling genitalia jongen"/>
+      </concept>
+      <concept>
+        <code value="315"/>
+        <display value="Pubesbeharing jongen"/>
+      </concept>
+      <concept>
+        <code value="317"/>
+        <display value="Borstontwikkeling meisje"/>
+      </concept>
+      <concept>
+        <code value="322"/>
+        <display value="Bijzonderheden slapen/waken"/>
+      </concept>
+      <concept>
+        <code value="323"/>
+        <display value="Voeding en eetgedrag"/>
+      </concept>
+      <concept>
+        <code value="324"/>
+        <display value="Zindelijkheid"/>
+      </concept>
+      <concept>
+        <code value="325"/>
+        <display value="Bijzonderheden ontlasten/plassen/zindelijkheid"/>
+      </concept>
+      <concept>
+        <code value="330"/>
+        <display value="Bijzonderheden lichaamsbeweging"/>
+      </concept>
+      <concept>
+        <code value="348"/>
+        <display value="Balans draaglast-draagkracht"/>
+      </concept>
+      <concept>
+        <code value="349"/>
+        <display value="Bijzonderheden verhouding draaglast-draagkracht"/>
+      </concept>
+      <concept>
+        <code value="381"/>
+        <display value="Uitslag"/>
+      </concept>
+      <concept>
+        <code value="390"/>
+        <display value="Cornea lichtreflex rechts"/>
+      </concept>
+      <concept>
+        <code value="391"/>
+        <display value="Cornea lichtreflex links"/>
+      </concept>
+      <concept>
+        <code value="392"/>
+        <display value="Afdektest: geen instel beweging rechts"/>
+      </concept>
+      <concept>
+        <code value="393"/>
+        <display value="Afdektest: geen instel beweging links"/>
+      </concept>
+      <concept>
+        <code value="396"/>
+        <display value="Volgbeweging binoculair rechts"/>
+      </concept>
+      <concept>
+        <code value="397"/>
+        <display value="Volgbeweging binoculair links"/>
+      </concept>
+      <concept>
+        <code value="398"/>
+        <display value="Volgbeweging monoculair rechts"/>
+      </concept>
+      <concept>
+        <code value="399"/>
+        <display value="Volgbeweging monoculair links"/>
+      </concept>
+      <concept>
+        <code value="408"/>
+        <display value="Conclusie visusbepaling"/>
+      </concept>
+      <concept>
+        <code value="422"/>
+        <display value="Bijzonderheden testis rechts"/>
+      </concept>
+      <concept>
+        <code value="428"/>
+        <display value="Overige bijzonderheden hartonderzoek"/>
+      </concept>
+      <concept>
+        <code value="439"/>
+        <display value="Uitslag 1e NGS rechts"/>
+      </concept>
+      <concept>
+        <code value="441"/>
+        <display value="Uitslag 1e NGS links"/>
+      </concept>
+      <concept>
+        <code value="442"/>
+        <display value="Uitslag 2e NGS rechts"/>
+      </concept>
+      <concept>
+        <code value="444"/>
+        <display value="Uitslag 2e NGS links"/>
+      </concept>
+      <concept>
+        <code value="445"/>
+        <display value="Uitslag 3e NGS rechts"/>
+      </concept>
+      <concept>
+        <code value="447"/>
+        <display value="Uitslag 3e NGS links"/>
+      </concept>
+      <concept>
+        <code value="458"/>
+        <display value="Audiogram"/>
+      </concept>
+      <concept>
+        <code value="481"/>
+        <display value="Bedreiging sociaal milieu"/>
+      </concept>
+      <concept>
+        <code value="496"/>
+        <display value="Melkvoeding op dit moment"/>
+      </concept>
+      <concept>
+        <code value="514"/>
+        <display value="Ervaren gezondheid"/>
+      </concept>
+      <concept>
+        <code value="619"/>
+        <display value="Bijzonderheden (vorige) zwangerschap"/>
+      </concept>
+      <concept>
+        <code value="739"/>
+        <display value="Risico-inventarisatie VGV"/>
+      </concept>
+      <concept>
+        <code value="740"/>
+        <display value="Graviditeit"/>
+      </concept>
+      <concept>
+        <code value="741"/>
+        <display value="Pariteit"/>
+      </concept>
+      <concept>
+        <code value="745"/>
+        <display value="Type drugsgebruik tijdens de zwangerschap"/>
+      </concept>
+      <concept>
+        <code value="746"/>
+        <display value="A. femoralis links"/>
+      </concept>
+      <concept>
+        <code value="747"/>
+        <display value="Melkvoeding op geboortedag"/>
+      </concept>
+      <concept>
+        <code value="748"/>
+        <display value="Anamnese"/>
+      </concept>
+      <concept>
+        <code value="755"/>
+        <display value="Ingrijpende gebeurtenissen"/>
+      </concept>
+      <concept>
+        <code value="773"/>
+        <display value="Bijzonderheden hechting"/>
+      </concept>
+      <concept>
+        <code value="774"/>
+        <display value="Relatie met ouder/verzorger"/>
+      </concept>
+      <concept>
+        <code value="781"/>
+        <display value="Bijzonderheden wilsontwikkeling"/>
+      </concept>
+      <concept>
+        <code value="794"/>
+        <display value="Bijzonderheden uiterlijk oor rechts"/>
+      </concept>
+      <concept>
+        <code value="795"/>
+        <display value="Bijzonderheden uiterlijk oor links"/>
+      </concept>
+      <concept>
+        <code value="796"/>
+        <display value="Bijzonderheden mond/tong"/>
+      </concept>
+      <concept>
+        <code value="797"/>
+        <display value="Bijzonderheden hals"/>
+      </concept>
+      <concept>
+        <code value="798"/>
+        <display value="Bijzonderheden abdomen"/>
+      </concept>
+      <concept>
+        <code value="800"/>
+        <display value="Hoogteverschil gibbus bij scoliose"/>
+      </concept>
+      <concept>
+        <code value="802"/>
+        <display value="Bijzonderheden bovenste extremiteiten"/>
+      </concept>
+      <concept>
+        <code value="804"/>
+        <display value="Beenlengteverschil"/>
+      </concept>
+      <concept>
+        <code value="805"/>
+        <display value="Bijzonderheden voet links"/>
+      </concept>
+      <concept>
+        <code value="809"/>
+        <display value="Target height"/>
+      </concept>
+      <concept>
+        <code value="810"/>
+        <display value="Target Height Range"/>
+      </concept>
+      <concept>
+        <code value="811"/>
+        <display value="Groeicurve gewicht naar leeftijd"/>
+      </concept>
+      <concept>
+        <code value="812"/>
+        <display value="Groeicurve gewicht naar lengte"/>
+      </concept>
+      <concept>
+        <code value="813"/>
+        <display value="BMI-curve"/>
+      </concept>
+      <concept>
+        <code value="816"/>
+        <display value="Taalomgeving stimulerend"/>
+      </concept>
+      <concept>
+        <code value="818"/>
+        <display value="Beoordeling taalontwikkeling"/>
+      </concept>
+      <concept>
+        <code value="820"/>
+        <display value="Aard bijzonderheden spraak- en taalontwikkeling"/>
+      </concept>
+      <concept>
+        <code value="822"/>
+        <display value="Totaalscore SLS"/>
+      </concept>
+      <concept>
+        <code value="823"/>
+        <display value="Beoordeling spraak- en taalontwikkeling Nederlands"/>
+      </concept>
+      <concept>
+        <code value="824"/>
+        <display value="Bijzonderheden menstruatie"/>
+      </concept>
+      <concept>
+        <code value="825"/>
+        <display value="Pubesbeharing meisje"/>
+      </concept>
+      <concept>
+        <code value="827"/>
+        <display value="Bedreiging fysiek milieu"/>
+      </concept>
+      <concept>
+        <code value="839"/>
+        <display value="Bijzonderheden visusbepaling"/>
+      </concept>
+      <concept>
+        <code value="840"/>
+        <display value="Rode fundusreflex rechts"/>
+      </concept>
+      <concept>
+        <code value="841"/>
+        <display value="Rode fundusreflex links"/>
+      </concept>
+      <concept>
+        <code value="851"/>
+        <display value="Bijzonderheden inspectie oog"/>
+      </concept>
+      <concept>
+        <code value="856"/>
+        <display value="Geruis intensiteit"/>
+      </concept>
+      <concept>
+        <code value="858"/>
+        <display value="Geruis timing"/>
+      </concept>
+      <concept>
+        <code value="859"/>
+        <display value="Lokalisatie"/>
+      </concept>
+      <concept>
+        <code value="860"/>
+        <display value="Voortgeleiding"/>
+      </concept>
+      <concept>
+        <code value="861"/>
+        <display value="Bijzonderheden harttonen"/>
+      </concept>
+      <concept>
+        <code value="862"/>
+        <display value="Bijzonderheden hartritme"/>
+      </concept>
+      <concept>
+        <code value="863"/>
+        <display value="Bijzonderheden gehooronderzoek"/>
+      </concept>
+      <concept>
+        <code value="864"/>
+        <display value="Testtoon aangeboden"/>
+      </concept>
+      <concept>
+        <code value="865"/>
+        <display value="Uitslag gehoorscreening"/>
+      </concept>
+      <concept>
+        <code value="869"/>
+        <display value="Uitslag serologisch onderzoek Hepatitis B"/>
+      </concept>
+      <concept>
+        <code value="877"/>
+        <display value="Gedragstoestand Van Wiechen"/>
+      </concept>
+      <concept>
+        <code value="878"/>
+        <display value="Interactie Van Wiechen"/>
+      </concept>
+      <concept>
+        <code value="879"/>
+        <display value="1. Ogen fixeren"/>
+      </concept>
+      <concept>
+        <code value="881"/>
+        <display value="2. Volgt met ogen èn hoofd 30º-0º-30º rechts"/>
+      </concept>
+      <concept>
+        <code value="883"/>
+        <display value="2. Volgt met ogen èn hoofd 30º-0º-30º links"/>
+      </concept>
+      <concept>
+        <code value="884"/>
+        <display value="3. Handen af en toe open rechts"/>
+      </concept>
+      <concept>
+        <code value="885"/>
+        <display value="3. Handen af en toe open links"/>
+      </concept>
+      <concept>
+        <code value="886"/>
+        <display value="4. Kijkt naar eigen handen"/>
+      </concept>
+      <concept>
+        <code value="887"/>
+        <display value="5. Speelt met handen middenvoor"/>
+      </concept>
+      <concept>
+        <code value="888"/>
+        <display value="6. Pakt in rugligging voorwerp binnen bereik rechts"/>
+      </concept>
+      <concept>
+        <code value="889"/>
+        <display value="6. Pakt in rugligging voorwerp binnen bereik links"/>
+      </concept>
+      <concept>
+        <code value="890"/>
+        <display value="7. Pakt blokje over"/>
+      </concept>
+      <concept>
+        <code value="891"/>
+        <display value="8. Houdt blokje vast, pakt er nog een in andere hand"/>
+      </concept>
+      <concept>
+        <code value="892"/>
+        <display value="9. Speelt met beide voeten rechts"/>
+      </concept>
+      <concept>
+        <code value="893"/>
+        <display value="9. Speelt met beide voeten links"/>
+      </concept>
+      <concept>
+        <code value="894"/>
+        <display value="10. Pakt propje met duim en wijsvinger rechts"/>
+      </concept>
+      <concept>
+        <code value="896"/>
+        <display value="10. Pakt propje met duim en wijsvinger links"/>
+      </concept>
+      <concept>
+        <code value="897"/>
+        <display value="11. Doet blokje in/uit doos rechts"/>
+      </concept>
+      <concept>
+        <code value="898"/>
+        <display value="11. Doet blokje in/uit doos links"/>
+      </concept>
+      <concept>
+        <code value="900"/>
+        <display value="12. Speelt &quot;geven en nemen&quot;"/>
+      </concept>
+      <concept>
+        <code value="902"/>
+        <display value="13. Stapelt 2 blokjes rechts"/>
+      </concept>
+      <concept>
+        <code value="903"/>
+        <display value="13. Stapelt 2 blokjes links"/>
+      </concept>
+      <concept>
+        <code value="905"/>
+        <display value="14. Gaat op onderzoek uit"/>
+      </concept>
+      <concept>
+        <code value="906"/>
+        <display value="15. Stapelt 3 blokjes rechts"/>
+      </concept>
+      <concept>
+        <code value="907"/>
+        <display value="15. Stapelt 3 blokjes links"/>
+      </concept>
+      <concept>
+        <code value="909"/>
+        <display value="16. Doet anderen na"/>
+      </concept>
+      <concept>
+        <code value="910"/>
+        <display value="17. Stapelt 6 blokjes"/>
+      </concept>
+      <concept>
+        <code value="912"/>
+        <display value="18. Plaatst ronde vorm in stoof"/>
+      </concept>
+      <concept>
+        <code value="913"/>
+        <display value="19. Trekt kledingstuk uit"/>
+      </concept>
+      <concept>
+        <code value="914"/>
+        <display value="20. Bouwt vrachtauto na"/>
+      </concept>
+      <concept>
+        <code value="916"/>
+        <display value="21. Plaatst 3 vormen in stoof"/>
+      </concept>
+      <concept>
+        <code value="917"/>
+        <display value="22. Tekent verticale lijn na"/>
+      </concept>
+      <concept>
+        <code value="918"/>
+        <display value="23. Bouwt brug na"/>
+      </concept>
+      <concept>
+        <code value="920"/>
+        <display value="24. Plaatst 4 vormen in stoof"/>
+      </concept>
+      <concept>
+        <code value="921"/>
+        <display value="25. Trekt eigen kledingstuk aan"/>
+      </concept>
+      <concept>
+        <code value="922"/>
+        <display value="26. Tekent cirkel na"/>
+      </concept>
+      <concept>
+        <code value="923"/>
+        <display value="27. Houdt potlood met vingers vast"/>
+      </concept>
+      <concept>
+        <code value="926"/>
+        <display value="28. Tekent kruis na"/>
+      </concept>
+      <concept>
+        <code value="927"/>
+        <display value="29. Reageert op toespreken"/>
+      </concept>
+      <concept>
+        <code value="928"/>
+        <display value="30. Lacht terug"/>
+      </concept>
+      <concept>
+        <code value="929"/>
+        <display value="Lacht eerste keer terug"/>
+      </concept>
+      <concept>
+        <code value="930"/>
+        <display value="31. Maakt geluiden terug"/>
+      </concept>
+      <concept>
+        <code value="931"/>
+        <display value="32. Maakt gevarieerde geluiden"/>
+      </concept>
+      <concept>
+        <code value="932"/>
+        <display value="33. Zegt &quot;dada-baba&quot; of &quot;gaga&quot;"/>
+      </concept>
+      <concept>
+        <code value="933"/>
+        <display value="34. Brabbelt bij zijn spel"/>
+      </concept>
+      <concept>
+        <code value="934"/>
+        <display value="35. Reageert op mondeling verzoek"/>
+      </concept>
+      <concept>
+        <code value="935"/>
+        <display value="36. Maakt communicatieve gebaren"/>
+      </concept>
+      <concept>
+        <code value="936"/>
+        <display value="37. Zegt 2 &quot;geluidswoorden&quot; met begrip"/>
+      </concept>
+      <concept>
+        <code value="937"/>
+        <display value="38. Begrijpt enkele dagelijks gebruikte zinnen"/>
+      </concept>
+      <concept>
+        <code value="938"/>
+        <display value="39. Zegt 3 &quot;woorden&quot; met begrip"/>
+      </concept>
+      <concept>
+        <code value="939"/>
+        <display value="40. Begrijpt fantasieopdrachtjes (M)"/>
+      </concept>
+      <concept>
+        <code value="940"/>
+        <display value="41. Zegt &quot;zinnen&quot; van 2 woorden"/>
+      </concept>
+      <concept>
+        <code value="941"/>
+        <display value="42. Wijst 6 lichaamsdelen aan bij pop"/>
+      </concept>
+      <concept>
+        <code value="943"/>
+        <display value="43. Noemt zichzelf &quot;mij&quot; of &quot;ik&quot;"/>
+      </concept>
+      <concept>
+        <code value="945"/>
+        <display value="44. Wijst 5 plaatjes aan in boek"/>
+      </concept>
+      <concept>
+        <code value="947"/>
+        <display value="45. Zegt &quot;zinnen&quot; van 3 of meer woorden"/>
+      </concept>
+      <concept>
+        <code value="948"/>
+        <display value="46. Is verstaanbaar voor bekenden"/>
+      </concept>
+      <concept>
+        <code value="949"/>
+        <display value="47. Praat spontaan over gebeurtenissen thuis/speelzaal"/>
+      </concept>
+      <concept>
+        <code value="950"/>
+        <display value="48. Stelt vragen naar &quot;wie&quot;, &quot;wat&quot;, &quot;waar&quot;, &quot;hoe&quot;"/>
+      </concept>
+      <concept>
+        <code value="951"/>
+        <display value="49. Is goed verstaanbaar voor onderzoeker"/>
+      </concept>
+      <concept>
+        <code value="953"/>
+        <display value="50. Stelt vragen naar &quot;hoeveel&quot;, &quot;wanneer&quot;, &quot;waarom&quot;"/>
+      </concept>
+      <concept>
+        <code value="954"/>
+        <display value="51. Begrijpt analogieën en tegenstellingen"/>
+      </concept>
+      <concept>
+        <code value="961"/>
+        <display value="54. Blijft hangen bij optillen onder de oksels"/>
+      </concept>
+      <concept>
+        <code value="962"/>
+        <display value="55. Reacties bij optrekken tot zit"/>
+      </concept>
+      <concept>
+        <code value="964"/>
+        <display value="56. Heft kin even van onderlaag"/>
+      </concept>
+      <concept>
+        <code value="966"/>
+        <display value="57. Heft in buikligging hoofd tot 45º"/>
+      </concept>
+      <concept>
+        <code value="968"/>
+        <display value="58. Kijkt rond met 90º geheven hoofd"/>
+      </concept>
+      <concept>
+        <code value="970"/>
+        <display value="59. Benen gebogen of trappelen bij verticaal zwaaien rechts"/>
+      </concept>
+      <concept>
+        <code value="971"/>
+        <display value="59. Benen gebogen of trappelen bij verticaal zwaaien links"/>
+      </concept>
+      <concept>
+        <code value="973"/>
+        <display value="60. Rolt zich om van rug naar buik en omgekeerd"/>
+      </concept>
+      <concept>
+        <code value="975"/>
+        <display value="61. Kan hoofd goed ophouden in zit"/>
+      </concept>
+      <concept>
+        <code value="977"/>
+        <display value="62. Zit op billen met gestrekte benen"/>
+      </concept>
+      <concept>
+        <code value="978"/>
+        <display value="63. Zit stabiel los"/>
+      </concept>
+      <concept>
+        <code value="980"/>
+        <display value="64. Kruipt vooruit, buik op de grond"/>
+      </concept>
+      <concept>
+        <code value="982"/>
+        <display value="66. Kruipt vooruit"/>
+      </concept>
+      <concept>
+        <code value="984"/>
+        <display value="67. Loopt langs"/>
+      </concept>
+      <concept>
+        <code value="988"/>
+        <display value="Eerste keer los lopen"/>
+      </concept>
+      <concept>
+        <code value="989"/>
+        <display value="69. Gooit bal zonder om te vallen"/>
+      </concept>
+      <concept>
+        <code value="991"/>
+        <display value="70. Kan hurken en weer gaan staan zonder steun en zonder hulp van de armen"/>
+      </concept>
+      <concept>
+        <code value="993"/>
+        <display value="71. Schopt bal weg rechts"/>
+      </concept>
+      <concept>
+        <code value="994"/>
+        <display value="71. Schopt bal weg links"/>
+      </concept>
+      <concept>
+        <code value="996"/>
+        <display value="72. Kan in zit soepel roteren"/>
+      </concept>
+      <concept>
+        <code value="998"/>
+        <display value="73. Fietst (op driewieler)"/>
+      </concept>
+      <concept>
+        <code value="999"/>
+        <display value="74. Springt met beide voeten tegelijk"/>
+      </concept>
+      <concept>
+        <code value="1001"/>
+        <display value="75. Kan minstens 5 seconden op één been staan rechts"/>
+      </concept>
+      <concept>
+        <code value="1002"/>
+        <display value="75. Kan minstens 5 seconden op één been staan links"/>
+      </concept>
+      <concept>
+        <code value="1005"/>
+        <display value="Observatie bij oefeningen"/>
+      </concept>
+      <concept>
+        <code value="1007"/>
+        <display value="1. Figuren natekenen - kwantiteit"/>
+      </concept>
+      <concept>
+        <code value="1008"/>
+        <display value="2. Lijntrekken - kwantiteit"/>
+      </concept>
+      <concept>
+        <code value="1009"/>
+        <display value="2. Lijntrekken - kwaliteit"/>
+      </concept>
+      <concept>
+        <code value="1010"/>
+        <display value="3. Stippen zetten - kwantiteit"/>
+      </concept>
+      <concept>
+        <code value="1011"/>
+        <display value="3. Pengreep - kwaliteit"/>
+      </concept>
+      <concept>
+        <code value="1012"/>
+        <display value="4. Vinger-duim oppositie - kwantiteit rechts"/>
+      </concept>
+      <concept>
+        <code value="1013"/>
+        <display value="4. Vinger-duim oppositie - kwantiteit links"/>
+      </concept>
+      <concept>
+        <code value="1014"/>
+        <display value="4. Vinger-duim oppositie - kwaliteit"/>
+      </concept>
+      <concept>
+        <code value="1015"/>
+        <display value="5. Oogbewegingen - kwantiteit"/>
+      </concept>
+      <concept>
+        <code value="1016"/>
+        <display value="5. Oogbewegingen - kwaliteit"/>
+      </concept>
+      <concept>
+        <code value="1017"/>
+        <display value="6. Top-neus proef - kwantiteit rechts"/>
+      </concept>
+      <concept>
+        <code value="1018"/>
+        <display value="6. Top-neus proef - kwantiteit links"/>
+      </concept>
+      <concept>
+        <code value="1019"/>
+        <display value="7. Diadochokinese - kwantiteit rechts"/>
+      </concept>
+      <concept>
+        <code value="1020"/>
+        <display value="7. Diadochokinese - kwantiteit links"/>
+      </concept>
+      <concept>
+        <code value="1021"/>
+        <display value="7. Diadochokinese - kwaliteit"/>
+      </concept>
+      <concept>
+        <code value="1022"/>
+        <display value="8. Veter strikken - kwantiteit"/>
+      </concept>
+      <concept>
+        <code value="1023"/>
+        <display value="9. Eén been staan - kwantiteit rechts"/>
+      </concept>
+      <concept>
+        <code value="1024"/>
+        <display value="9. Eén been staan - kwantiteit links"/>
+      </concept>
+      <concept>
+        <code value="1025"/>
+        <display value="9. Eén been staan - kwaliteit"/>
+      </concept>
+      <concept>
+        <code value="1026"/>
+        <display value="10. Hielen lopen - kwantiteit"/>
+      </concept>
+      <concept>
+        <code value="1027"/>
+        <display value="10. Hielen lopen - kwaliteit"/>
+      </concept>
+      <concept>
+        <code value="1028"/>
+        <display value="11. Streeplopen - kwantiteit"/>
+      </concept>
+      <concept>
+        <code value="1029"/>
+        <display value="11. Streeplopen - kwaliteit"/>
+      </concept>
+      <concept>
+        <code value="1030"/>
+        <display value="12. Hinkelen - kwantiteit rechts"/>
+      </concept>
+      <concept>
+        <code value="1031"/>
+        <display value="12. Hinkelen - kwantiteit links"/>
+      </concept>
+      <concept>
+        <code value="1032"/>
+        <display value="12. Hinkelen - kwaliteit"/>
+      </concept>
+      <concept>
+        <code value="1033"/>
+        <display value="13. Springen - kwantiteit"/>
+      </concept>
+      <concept>
+        <code value="1034"/>
+        <display value="13. Springen - kwaliteit"/>
+      </concept>
+      <concept>
+        <code value="1035"/>
+        <display value="Is er sprake van fysieke belemmeringen"/>
+      </concept>
+      <concept>
+        <code value="1036"/>
+        <display value="Bijzonderheden fysieke belemmeringen"/>
+      </concept>
+      <concept>
+        <code value="1037"/>
+        <display value="Is er sprake van negatieve kindfactoren"/>
+      </concept>
+      <concept>
+        <code value="1038"/>
+        <display value="Bijzonderheden negatieve kindfactoren"/>
+      </concept>
+      <concept>
+        <code value="1039"/>
+        <display value="Is er sprake van negatieve omgevingsfactoren"/>
+      </concept>
+      <concept>
+        <code value="1040"/>
+        <display value="Bijzonderheden negatieve omgevingsfactoren"/>
+      </concept>
+      <concept>
+        <code value="1041"/>
+        <display value="Kwantiteitscore"/>
+      </concept>
+      <concept>
+        <code value="1042"/>
+        <display value="Percentiel"/>
+      </concept>
+      <concept>
+        <code value="1043"/>
+        <display value="Kwaliteitscore fijne motoriek"/>
+      </concept>
+      <concept>
+        <code value="1044"/>
+        <display value="Kwaliteitscore grove motoriek"/>
+      </concept>
+      <concept>
+        <code value="1078"/>
+        <display value="1. Houdt rekening met gevoelens van anderen"/>
+      </concept>
+      <concept>
+        <code value="1079"/>
+        <display value="2. Is rusteloos"/>
+      </concept>
+      <concept>
+        <code value="1080"/>
+        <display value="3. Klaagt vaak over hoofdpijn"/>
+      </concept>
+      <concept>
+        <code value="1081"/>
+        <display value="4. Deelt makkelijk met andere jeugdigen"/>
+      </concept>
+      <concept>
+        <code value="1082"/>
+        <display value="5. Heeft vaak driftbuien of woede-uitbarstingen"/>
+      </concept>
+      <concept>
+        <code value="1083"/>
+        <display value="6. Is nogal op zichzelf"/>
+      </concept>
+      <concept>
+        <code value="1084"/>
+        <display value="7. Is doorgaans gehoorzaam"/>
+      </concept>
+      <concept>
+        <code value="1085"/>
+        <display value="8. Heeft veel zorgen"/>
+      </concept>
+      <concept>
+        <code value="1086"/>
+        <display value="9. Is behulpzaam als iemand zich heeft bezeerd"/>
+      </concept>
+      <concept>
+        <code value="1087"/>
+        <display value="10. Is constant aan het wiebelen of wriemelen"/>
+      </concept>
+      <concept>
+        <code value="1088"/>
+        <display value="11. Heeft minstens één goede vriend of vriendin"/>
+      </concept>
+      <concept>
+        <code value="1089"/>
+        <display value="12. Vecht vaak met andere jeugdigen of pest ze"/>
+      </concept>
+      <concept>
+        <code value="1090"/>
+        <display value="13. Is vaak ongelukkig"/>
+      </concept>
+      <concept>
+        <code value="1091"/>
+        <display value="14. Wordt over het algemeen aardig gevonden door andere jeugdigen"/>
+      </concept>
+      <concept>
+        <code value="1092"/>
+        <display value="15. Is gemakkelijk afgeleid"/>
+      </concept>
+      <concept>
+        <code value="1093"/>
+        <display value="16. Is zenuwachtig of zich vastklampend in nieuwe situaties"/>
+      </concept>
+      <concept>
+        <code value="1094"/>
+        <display value="17. Is aardig tegen jongere kinderen"/>
+      </concept>
+      <concept>
+        <code value="1095"/>
+        <display value="18. Liegt of bedriegt vaak"/>
+      </concept>
+      <concept>
+        <code value="1096"/>
+        <display value="19. Wordt getreiterd of gepest door andere jeugdigen"/>
+      </concept>
+      <concept>
+        <code value="1097"/>
+        <display value="20. Biedt vaak vrijwillig hulp aan anderen"/>
+      </concept>
+      <concept>
+        <code value="1098"/>
+        <display value="21. Denkt na voor iets te doen"/>
+      </concept>
+      <concept>
+        <code value="1099"/>
+        <display value="22. Pikt dingen thuis"/>
+      </concept>
+      <concept>
+        <code value="1100"/>
+        <display value="23. Kan beter opschieten met volwassenen dan met andere jeugdigen"/>
+      </concept>
+      <concept>
+        <code value="1101"/>
+        <display value="24. Is voor heel veel bang"/>
+      </concept>
+      <concept>
+        <code value="1102"/>
+        <display value="25. Maakt opdrachten af"/>
+      </concept>
+      <concept>
+        <code value="1104"/>
+        <display value="Denkt u over het geheel genomen dat uw kind moeilijkheden heeft op één of meer van de volgende gebieden: emoties, concentratie, gedrag of vermogen om met andere mensen op te schieten?"/>
+      </concept>
+      <concept>
+        <code value="1105"/>
+        <display value="Hoe lang bestaan deze moeilijkheden?"/>
+      </concept>
+      <concept>
+        <code value="1106"/>
+        <display value="Maken de moeilijkheden uw kind overstuur of van slag?"/>
+      </concept>
+      <concept>
+        <code value="1107"/>
+        <display value="Belemmering thuis"/>
+      </concept>
+      <concept>
+        <code value="1108"/>
+        <display value="Belemmering vriendschappen"/>
+      </concept>
+      <concept>
+        <code value="1109"/>
+        <display value="Belemmering leren in de klas"/>
+      </concept>
+      <concept>
+        <code value="1110"/>
+        <display value="Belemmering activiteiten in de vrije tijd"/>
+      </concept>
+      <concept>
+        <code value="1111"/>
+        <display value="Belasten de moeilijkheden u of het gezin als geheel?"/>
+      </concept>
+      <concept>
+        <code value="1112"/>
+        <display value="Score emotionele problemen"/>
+      </concept>
+      <concept>
+        <code value="1113"/>
+        <display value="Score gedragsproblemen"/>
+      </concept>
+      <concept>
+        <code value="1114"/>
+        <display value="Score problemen leeftijdsgenoten"/>
+      </concept>
+      <concept>
+        <code value="1115"/>
+        <display value="Score hyperactiviteit"/>
+      </concept>
+      <concept>
+        <code value="1116"/>
+        <display value="SDQ totaal score"/>
+      </concept>
+      <concept>
+        <code value="1117"/>
+        <display value="Score pro-sociaal gedrag"/>
+      </concept>
+      <concept>
+        <code value="1173"/>
+        <display value="0. Stoornis"/>
+      </concept>
+      <concept>
+        <code value="1174"/>
+        <display value="1. Hoorstoornis"/>
+      </concept>
+      <concept>
+        <code value="1175"/>
+        <display value="2. Stemstoornis"/>
+      </concept>
+      <concept>
+        <code value="1176"/>
+        <display value="3. Taalstoornis"/>
+      </concept>
+      <concept>
+        <code value="1177"/>
+        <display value="5. Articulatie"/>
+      </concept>
+      <concept>
+        <code value="1178"/>
+        <display value="6. Nasaliteit"/>
+      </concept>
+      <concept>
+        <code value="1179"/>
+        <display value="7. Stoornis in vloeiendheid"/>
+      </concept>
+      <concept>
+        <code value="1180"/>
+        <display value="8. Afwijkend mondgedrag"/>
+      </concept>
+      <concept>
+        <code value="1181"/>
+        <display value="9. Overig"/>
+      </concept>
+      <concept>
+        <code value="1203"/>
+        <display value="Testtoon 500 rechts"/>
+      </concept>
+      <concept>
+        <code value="1204"/>
+        <display value="Testtoon 500 links"/>
+      </concept>
+      <concept>
+        <code value="1205"/>
+        <display value="Testtoon 1000 rechts"/>
+      </concept>
+      <concept>
+        <code value="1206"/>
+        <display value="Testtoon 1000 links"/>
+      </concept>
+      <concept>
+        <code value="1207"/>
+        <display value="Testtoon 2000 rechts"/>
+      </concept>
+      <concept>
+        <code value="1208"/>
+        <display value="Testtoon 2000 links"/>
+      </concept>
+      <concept>
+        <code value="1209"/>
+        <display value="Testtoon 3000 rechts"/>
+      </concept>
+      <concept>
+        <code value="1210"/>
+        <display value="Testtoon 3000 links"/>
+      </concept>
+      <concept>
+        <code value="1211"/>
+        <display value="Testtoon 4000 rechts"/>
+      </concept>
+      <concept>
+        <code value="1212"/>
+        <display value="Testtoon 4000 links"/>
+      </concept>
+      <concept>
+        <code value="1213"/>
+        <display value="Testtoon 6000 rechts"/>
+      </concept>
+      <concept>
+        <code value="1214"/>
+        <display value="Testtoon 6000 links"/>
+      </concept>
+      <concept>
+        <code value="1216"/>
+        <display value="Drempel 500 rechts"/>
+      </concept>
+      <concept>
+        <code value="1218"/>
+        <display value="Drempel 500 links"/>
+      </concept>
+      <concept>
+        <code value="1220"/>
+        <display value="Drempel 1000 rechts"/>
+      </concept>
+      <concept>
+        <code value="1222"/>
+        <display value="Drempel 1000 links"/>
+      </concept>
+      <concept>
+        <code value="1224"/>
+        <display value="Drempel 2000 rechts"/>
+      </concept>
+      <concept>
+        <code value="1226"/>
+        <display value="Drempel 2000 links"/>
+      </concept>
+      <concept>
+        <code value="1228"/>
+        <display value="Drempel 3000 rechts"/>
+      </concept>
+      <concept>
+        <code value="1230"/>
+        <display value="Drempel 3000 links"/>
+      </concept>
+      <concept>
+        <code value="1232"/>
+        <display value="Drempel 4000 rechts"/>
+      </concept>
+      <concept>
+        <code value="1234"/>
+        <display value="Drempel 4000 links"/>
+      </concept>
+      <concept>
+        <code value="1236"/>
+        <display value="Drempel 6000 rechts"/>
+      </concept>
+      <concept>
+        <code value="1238"/>
+        <display value="Drempel 6000 links"/>
+      </concept>
+      <concept>
+        <code value="1239"/>
+        <display value="Uitslag drempelonderzoek"/>
+      </concept>
+      <concept>
+        <code value="1278"/>
+        <display value="65. Trekt zich op tot staan"/>
+      </concept>
+      <concept>
+        <code value="1323"/>
+        <display value="Stuitligging laatste trimester"/>
+      </concept>
+      <concept>
+        <code value="1340"/>
+        <display value="Melkvoeding op 8e dag"/>
+      </concept>
+      <concept>
+        <code value="1346"/>
+        <display value="Conclusie SPP"/>
+      </concept>
+      <concept>
+        <code value="1382"/>
+        <display value="Gebruikt hand"/>
+      </concept>
+      <concept>
+        <code value="1392"/>
+        <display value="Bijzonderheden testis links"/>
+      </concept>
+      <concept>
+        <code value="1413"/>
+        <display value="Gescreend in NICU"/>
+      </concept>
+      <concept>
+        <code value="1414"/>
+        <display value="Risico-inschatting VGV op dit moment"/>
+      </concept>
+      <concept>
+        <code value="1425"/>
+        <display value="Bijzonderheden hand links"/>
+      </concept>
+      <concept>
+        <code value="1426"/>
+        <display value="Bijzonderheden hand rechts"/>
+      </concept>
+      <concept>
+        <code value="1433"/>
+        <display value="Diagnose Audiologisch Centrum gehoor links"/>
+      </concept>
+      <concept>
+        <code value="1434"/>
+        <display value="Diagnose Audiologisch Centrum gehoor rechts"/>
+      </concept>
+      <concept>
+        <code value="1435"/>
+        <display value="Advies Audiologisch Centrum aan ouders"/>
+      </concept>
+      <concept>
+        <code value="1438"/>
+        <display value="Proef van Romberg"/>
+      </concept>
+      <concept>
+        <code value="1447"/>
+        <display value="SDQ impactscore"/>
+      </concept>
+      <concept>
+        <code value="1485"/>
+        <display value="Middelomtrek in millimeters"/>
+      </concept>
+      <concept>
+        <code value="1486"/>
+        <display value="Bloeddruk systolisch"/>
+      </concept>
+      <concept>
+        <code value="1487"/>
+        <display value="Bloeddruk diastolisch"/>
+      </concept>
+      <concept>
+        <code value="1492"/>
+        <display value="Gewichtsklasse op basis van BMI"/>
+      </concept>
+      <concept>
+        <code value="1495"/>
+        <display value="Overall risicoinschatting SPARK"/>
+      </concept>
+      <concept>
+        <code value="1496"/>
+        <display value="Score taalsignaleringsinstrument"/>
+      </concept>
+      <concept>
+        <code value="1531"/>
+        <display value="Kolom Van Wiechen onderzoek"/>
+      </concept>
+      <concept>
+        <code value="1569"/>
+        <display value="Er zijn (blijvende) zorgen dat de opvoed- en/of opgroeisituatie van de jeugdige een bedreiging voor de veiligheid van de jeugdige kunnen vormen"/>
+      </concept>
+      <concept>
+        <code value="1570"/>
+        <display value="De (blijvende) zorgen zijn gedeeld met de jeugdige/ouder(s)/verzorger(s)"/>
+      </concept>
+      <concept>
+        <code value="1572"/>
+        <display value="Afwegingsvraag 1: Is er een vermoeden van (dreiging van) huiselijk geweld en/of kindermishandeling?"/>
+      </concept>
+      <concept>
+        <code value="1573"/>
+        <display value="Afwegingsvraag 2: Is er sprake van acute onveiligheid en/of structurele onveiligheid?"/>
+      </concept>
+      <concept>
+        <code value="1574"/>
+        <display value="Afwegingsvraag 3: Ben ik, als JGZ-professional, in staat effectieve hulp te bieden of te organiseren?"/>
+      </concept>
+      <concept>
+        <code value="1575"/>
+        <display value="Afwegingsvraag 4: Aanvaarden de betrokkenen de hulp? Ben ik in staat de hulp te bieden of te organiseren?"/>
+      </concept>
+      <concept>
+        <code value="1576"/>
+        <display value="Afwegingsvraag 5: Leidt de hulp binnen de gewenste termijn tot duurzame veiligheid en/of het welzijn van alle betrokkenen?"/>
+      </concept>
+      <concept>
+        <code value="1578"/>
+        <display value="A terme datum"/>
+      </concept>
+      <concept>
+        <code value="1579"/>
+        <display value="Moeder heeft kinkhoest doorgemaakt na zwangerschapsduur 12w6d"/>
+      </concept>
+      <concept>
+        <code value="1580"/>
+        <display value="Kinkhoest doorgemaakt na zwangerschapsduur 12w6d"/>
+      </concept>
+      <concept>
+        <code value="1591"/>
+        <display value="Uitslag visus rechts"/>
+      </concept>
+      <concept>
+        <code value="1592"/>
+        <display value="Uitslag visus links"/>
+      </concept>
+      <concept>
+        <code value="1601"/>
+        <display value="Schoolverzuim"/>
+      </concept>
+      <concept>
+        <code value="1603"/>
+        <display value="Advies met betrekking tot deelname aan lesprogramma"/>
+      </concept>
+      <concept>
+        <code value="1609"/>
+        <display value="Scrotale testes bij geboorte"/>
+      </concept>
+      <concept>
+        <code value="1611"/>
+        <display value="Bijzonderheden huilen"/>
+      </concept>
+      <concept>
+        <code value="1612"/>
+        <display value="Leefstijl"/>
+      </concept>
+      <concept>
+        <code value="1614"/>
+        <display value="Conclusie JGZ-professional lengtegroei"/>
+      </concept>
+      <concept>
+        <code value="1615"/>
+        <display value="Target Height SDS"/>
+      </concept>
+      <concept>
+        <code value="1618"/>
+        <display value="Conclusie visus 3 jaar"/>
+      </concept>
+      <concept>
+        <code value="1623"/>
+        <display value="Overall conclusie alle domeinen DMOP"/>
+      </concept>
+      <concept>
+        <code value="1624"/>
+        <display value="Waardering domein ‘Omstandigheden en gebeurtenissen' (DMOP)"/>
+      </concept>
+      <concept>
+        <code value="1625"/>
+        <display value="Waardering domein 'Welbevinden kind' (DMOP)"/>
+      </concept>
+      <concept>
+        <code value="1626"/>
+        <display value="Waardering domein 'Rol partner' (DMOP)"/>
+      </concept>
+      <concept>
+        <code value="1627"/>
+        <display value="Waardering domein 'Competentie ouder' (DMOP)"/>
+      </concept>
+      <concept>
+        <code value="1628"/>
+        <display value="Waardering domein 'Sociale steun' (DMOP)"/>
+      </concept>
+      <concept>
+        <code value="1629"/>
+        <display value="GIZ-driehoek"/>
+      </concept>
+      <concept>
+        <code value="1630"/>
+        <display value="Bijzonderheden GIZ-driehoek"/>
+      </concept>
+      <concept>
+        <code value="1631"/>
+        <display value="Lichamelijke ontwikkeling"/>
+      </concept>
+      <concept>
+        <code value="1632"/>
+        <display value="Verstandelijke ontwikkeling"/>
+      </concept>
+      <concept>
+        <code value="1633"/>
+        <display value="Emotionele ontwikkeling"/>
+      </concept>
+      <concept>
+        <code value="1634"/>
+        <display value="Sociale en seksuele ontwikkeling"/>
+      </concept>
+      <concept>
+        <code value="1635"/>
+        <display value="Basiszorg / veiligheid"/>
+      </concept>
+      <concept>
+        <code value="1636"/>
+        <display value="Opvoeden"/>
+      </concept>
+      <concept>
+        <code value="1637"/>
+        <display value="Beleving ouderschap"/>
+      </concept>
+      <concept>
+        <code value="1638"/>
+        <display value="Onderlinge steun ouders"/>
+      </concept>
+      <concept>
+        <code value="1639"/>
+        <display value="Gezinsomstandigheden"/>
+      </concept>
+      <concept>
+        <code value="1640"/>
+        <display value="Netwerk"/>
+      </concept>
+      <concept>
+        <code value="1641"/>
+        <display value="Conclusie van de zorgbehoeften GIZ"/>
+      </concept>
+      <concept>
+        <code value="1646"/>
+        <display value="Genotsmiddelen/verslavingsrisico"/>
+      </concept>
+      <concept>
+        <code value="1647"/>
+        <display value="Soorten genotsmiddelen/verslavingsrisico"/>
+      </concept>
+      <concept>
+        <code value="1649"/>
+        <display value="Seksueel functioneren"/>
+      </concept>
+      <concept>
+        <code value="1651"/>
+        <display value="Conclusie seksueel gedrag"/>
+      </concept>
+      <concept>
+        <code value="1656"/>
+        <display value="Psychosociaal functioneren en cognitieve ontwikkeling"/>
+      </concept>
+      <concept>
+        <code value="1658"/>
+        <display value="Beoordeling cognitieve ontwikkeling"/>
+      </concept>
+      <concept>
+        <code value="1659"/>
+        <display value="Bevinding(en) psychosociaal functioneren"/>
+      </concept>
+      <concept>
+        <code value="1660"/>
+        <display value="68a. Loopt los"/>
+      </concept>
+      <concept>
+        <code value="1662"/>
+        <display value="68b. Loopt goed los"/>
+      </concept>
+      <concept>
+        <code value="1664"/>
+        <display value="68c. Loopt soepel"/>
+      </concept>
+      <concept>
+        <code value="1665"/>
+        <display value="In de omgeving van de jeugdige wordt wel eens of dagelijks gerookt"/>
+      </concept>
+      <concept>
+        <code value="1668"/>
+        <display value="Jeugdige heeft zwemdiploma"/>
+      </concept>
+      <concept>
+        <code value="1669"/>
+        <display value="52. Beweegt armen evenveel"/>
+      </concept>
+      <concept>
+        <code value="1670"/>
+        <display value="53. Beweegt benen evenveel"/>
+      </concept>
+      <concept>
+        <code value="1671"/>
+        <display value="Scoliose hoekmeting"/>
+      </concept>
+      <concept>
+        <code value="1672"/>
+        <display value="Ligging testes"/>
+      </concept>
+      <concept>
+        <code value="1673"/>
+        <display value="Beoordeling puberteitsontwikkeling"/>
+      </concept>
+      <concept>
+        <code value="1674"/>
+        <display value="Genitalia/puberteitsontwikkeling"/>
+      </concept>
+      <concept>
+        <code value="1675"/>
+        <display value="Motorisch functioneren"/>
+      </concept>
+      <concept>
+        <code value="1676"/>
+        <display value="Zenuwstelsel"/>
+      </concept>
+      <concept>
+        <code value="1677"/>
+        <display value="Bijzonderheden zenuwstelsel"/>
+      </concept>
+      <concept>
+        <code value="1678"/>
+        <display value="Voorkeurshouding"/>
+      </concept>
+      <concept>
+        <code value="1679"/>
+        <display value="Algemene indruk"/>
+      </concept>
+      <concept>
+        <code value="1680"/>
+        <display value="Risicosignalen hartfunctie"/>
+      </concept>
+      <concept>
+        <code value="1681"/>
+        <display value="Hart- en Vaatstelsel"/>
+      </concept>
+      <concept>
+        <code value="1684"/>
+        <display value="Score op aanvullende vragen op ontwikkelingskenmerk 41"/>
+      </concept>
+      <concept>
+        <code value="1685"/>
+        <display value="Subscore Van Wiechen taalonderzoek 2 jaar"/>
+      </concept>
+      <concept>
+        <code value="1686"/>
+        <display value="Score spelvraag Van Wiechen taalonderzoek"/>
+      </concept>
+      <concept>
+        <code value="1687"/>
+        <display value="Beoordeling taalontwikkeling 2 jaar"/>
+      </concept>
+      <concept>
+        <code value="1688"/>
+        <display value="Beoordeling taalontwikkeling 2,6 jaar"/>
+      </concept>
+      <concept>
+        <code value="1689"/>
+        <display value="Beoordeling taalontwikkeling 3 jaar"/>
+      </concept>
+      <concept>
+        <code value="5063"/>
+        <display value="BCG litteken"/>
+      </concept>
+    </include>
+    <include>
+      <system value="urn:oid:2.16.840.1.113883.2.4.4.40.391"/>
+      <concept>
+        <code value="R042"/>
+        <display value="Van Wiechen ontwikkelingsonderzoek"/>
+      </concept>
+      <concept>
+        <code value="R043"/>
+        <display value="BFMT"/>
+      </concept>
+      <concept>
+        <code value="R049"/>
+        <display value="Screening logopedie"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

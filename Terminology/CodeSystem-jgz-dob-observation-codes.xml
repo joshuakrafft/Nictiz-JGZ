@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="jgz-dob-observation-codes" />
+  <text>
+    <status value="empty" />
+    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+  </text>
+  <url value="http://nictiz.nl/fhir/CodeSystem/jgz-dob-observation-codes" />
+  <version value="0.1.0" />
+  <name value="JGZ DOB observatiecodes" />
+  <title value="JGZ DOB observatiecodes" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Codestelsel dat de waarneembare concepten van de Basisdataset JGZ benoemt die in het Digitaal Overdrachtsbericht op Observation.code of Observation.component.code worden vastgelegd. Elke code correspondeert met een BDS-elementnummer. Waar een passende LOINC- of SNOMED-code beschikbaar is, wordt deze naast de code uit dit codestelsel meegegeven; dit codestelsel is bedoeld voor de concepten waarvoor internationale terminologie (nog) ontbreekt." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <caseSensitive value="true" />
+  <content value="complete" />
+  <count value="30" />
+  <concept>
+    <code value="bds-R019" />
+    <display value="Terugkerende anamnese" />
+    <definition value="Groeperend concept voor de bevindingen van rubriek R019 Terugkerende anamnese." />
+  </concept>
+  <concept>
+    <code value="bds-70" />
+    <display value="Kenmerk ouder/verzorger" />
+    <definition value="Een kenmerk van een ouder/verzorger dat van invloed kan zijn op de client/jeugdige (BDS element 70)." />
+  </concept>
+  <concept>
+    <code value="vitaminesuppletie" />
+    <display value="Vitaminesuppletie" />
+    <definition value="Groeperend concept voor de vitaminesuppletie van de client/jeugdige (BDS elementen 1337 en 1338)." />
+  </concept>
+  <concept>
+    <code value="bds-1337" />
+    <display value="Vitamine K" />
+    <definition value="Of er vitamine K wordt gegeven aan de client/jeugdige (BDS element 1337)." />
+  </concept>
+  <concept>
+    <code value="bds-1338" />
+    <display value="Vitamine D" />
+    <definition value="Of er vitamine D wordt gegeven aan de client/jeugdige (BDS element 1338)." />
+  </concept>
+  <concept>
+    <code value="bds-748" />
+    <display value="Anamnese" />
+    <definition value="Hoe het gaat met de client/jeugdige en de ouder/verzorger en hoe het (aanstaand) ouderschap wordt beleefd (BDS element 748)." />
+  </concept>
+  <concept>
+    <code value="bds-514" />
+    <display value="Ervaren gezondheid" />
+    <definition value="Hoe de gezondheid van de client/jeugdige door de ouder en/of hemzelf ervaren wordt (BDS element 514)." />
+  </concept>
+  <concept>
+    <code value="bds-323" />
+    <display value="Voeding en eetgedrag" />
+    <definition value="Beschrijving van voeding en eetgedrag, voedingsanamnese (BDS element 323)." />
+  </concept>
+  <concept>
+    <code value="bds-496" />
+    <display value="Melkvoeding op dit moment" />
+    <definition value="De melkvoeding van de client/jeugdige op dit moment (BDS element 496)." />
+  </concept>
+  <concept>
+    <code value="bds-322" />
+    <display value="Bijzonderheden slapen/waken" />
+    <definition value="Bijzonderheden rond slapen en waken, waaronder slaap-waakritme (BDS element 322)." />
+  </concept>
+  <concept>
+    <code value="bds-1611" />
+    <display value="Bijzonderheden huilen" />
+    <definition value="Beschrijving van bijzonderheden in huilgedrag en eventueel patroon (BDS element 1611)." />
+  </concept>
+  <concept>
+    <code value="bds-179" />
+    <display value="Bijzonderheden mondgedrag" />
+    <definition value="Bijzonderheden mondgedrag vastgesteld naar aanleiding van onderzoek en/of anamnese (BDS element 179)." />
+  </concept>
+  <concept>
+    <code value="bds-188" />
+    <display value="Poetsen gebit" />
+    <definition value="Of en hoe vaak het gebit wordt gepoetst (BDS element 188)." />
+  </concept>
+  <concept>
+    <code value="bds-190" />
+    <display value="Tandartsbezoek" />
+    <definition value="Of en hoe vaak de tandarts bezocht wordt (BDS element 190)." />
+  </concept>
+  <concept>
+    <code value="bds-1665" />
+    <display value="Roken in de omgeving van de jeugdige" />
+    <definition value="Of er in de omgeving van de jeugdige wel eens of dagelijks gerookt wordt (BDS element 1665)." />
+  </concept>
+  <concept>
+    <code value="bds-1667" />
+    <display value="Stoppen met roken interventie besproken" />
+    <definition value="Of begeleidingsmogelijkheden gericht op het stoppen met roken besproken zijn (BDS element 1667)." />
+  </concept>
+  <concept>
+    <code value="bds-330" />
+    <display value="Bijzonderheden lichaamsbeweging" />
+    <definition value="Bijzonderheden rond lichaamsbeweging van de client/jeugdige (BDS element 330)." />
+  </concept>
+  <concept>
+    <code value="bds-1612" />
+    <display value="Leefstijl" />
+    <definition value="Beschrijving van de leefstijl, inclusief vrijetijdsbesteding, sport en bewegen (BDS element 1612)." />
+  </concept>
+  <concept>
+    <code value="bds-1668" />
+    <display value="Jeugdige heeft zwemdiploma" />
+    <definition value="Of de jeugdige een zwemdiploma heeft (BDS element 1668)." />
+  </concept>
+  <concept>
+    <code value="bds-754" />
+    <display value="Ontvangen (para)medische zorg" />
+    <definition value="Ontvangen zorg van professionele hulpverleners, inclusief ziekenhuisopnames en operaties (BDS element 754)." />
+  </concept>
+  <concept>
+    <code value="bds-152" />
+    <display value="(Kinder-)ziekten" />
+    <definition value="Ziekten en chronische ziekten van de client/jeugdige (BDS element 152)." />
+  </concept>
+  <concept>
+    <code value="bds-154" />
+    <display value="Ongevallen" />
+    <definition value="Ongevallen die de client/jeugdige heeft gehad (BDS element 154)." />
+  </concept>
+  <concept>
+    <code value="bds-155" />
+    <display value="Medicijngebruik" />
+    <definition value="Welke medicijnen de client/jeugdige gebruikt (BDS element 155)." />
+  </concept>
+  <concept>
+    <code value="bds-1588" />
+    <display value="Medicijngebruik tijdens zwangerschap" />
+    <definition value="Welke medicijnen de zwangere client/jeugdige gebruikt (BDS element 1588)." />
+  </concept>
+  <concept>
+    <code value="bds-755" />
+    <display value="Ingrijpende gebeurtenissen" />
+    <definition value="Ingrijpende gebeurtenissen voor de client/jeugdige, het gezin en de omgeving (BDS element 755)." />
+  </concept>
+  <concept>
+    <code value="bds-1578" />
+    <display value="A terme datum" />
+    <definition value="De datum waarop de zwangere client/jeugdige is uitgerekend om te bevallen (BDS element 1578)." />
+  </concept>
+  <concept>
+    <code value="bds-1580" />
+    <display value="Kinkhoest doorgemaakt na zwangerschapsduur 12w6d" />
+    <definition value="Of de client/jeugdige kinkhoest heeft doorgemaakt na een zwangerschapsduur van 12 weken en 6 dagen (BDS element 1580)." />
+  </concept>
+  <concept>
+    <code value="bds-1582" />
+    <display value="Kinkhoestvaccinatie gekregen na zwangerschapsduur 12w6d" />
+    <definition value="Of de client/jeugdige kinkhoestvaccinatie heeft gekregen na een zwangerschapsduur van 12 weken en 6 dagen (BDS element 1582)." />
+  </concept>
+  <concept>
+    <code value="bds-1585" />
+    <display value="Stollingsstoornis" />
+    <definition value="Of de client een stollingsstoornis heeft (BDS element 1585)." />
+  </concept>
+  <concept>
+    <code value="bds-1586" />
+    <display value="Chronisch drager Hepatitis-B" />
+    <definition value="Of de client chronisch drager van Hepatitis-B is (BDS element 1586)." />
+  </concept>
+</CodeSystem>

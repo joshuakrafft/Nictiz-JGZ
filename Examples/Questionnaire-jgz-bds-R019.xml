@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Questionnaire xmlns="http://hl7.org/fhir">
+  <id value="jgz-bds-R019"/>
+  <url value="http://nictiz.nl/fhir/Questionnaire/jgz-bds-R019"/>
+  <version value="0.1.0"/>
+  <name value="JgzBdsR019TerugkerendeAnamnese"/>
+  <title value="R019 Terugkerende anamnese"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <subjectType value="Patient"/>
+  <date value="2026-07-13"/>
+  <publisher value="TODO: publicerende organisatie"/>
+  <description value="Vastleggen van belangrijke gebeurtenissen in het leven van de cliënt/jeugdige en zijn gezin vermeld door de cliënt/jeugdige en/of begeleider(s). Concept-Questionnaire voor rubriek R019 van de Basisdataset (BDS) JGZ, ten behoeve van het Dossieroverdrachtsbericht (DOB)."/>
+  <code>
+    <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-rubrieken"/>
+    <code value="R019"/>
+    <display value="Terugkerende anamnese"/>
+  </code>
+  <item>
+    <linkId value="jgz-bds-element-748"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="748"/>
+      <display value="Anamnese"/>
+    </code>
+    <text value="Anamnese">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Vermeld hoe het gaat met de cliënt/jeugdige, hoe het gaat met de ouder/verzorger, hoe de beleving is van het (aanstaand) ouderschap."/>
+      </extension>
+    </text>
+    <type value="text"/>
+    <required value="false"/>
+    <repeats value="false"/>
+    <maxLength value="4000"/>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-514"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="514"/>
+      <display value="Ervaren gezondheid"/>
+    </code>
+    <text value="Ervaren gezondheid">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Vermeld hoe de gezondheid van de cliënt/jeugdige door de ouder en/of hemzelf ervaren wordt."/>
+      </extension>
+    </text>
+    <type value="choice"/>
+    <required value="false"/>
+    <repeats value="false"/>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-ervaren-gezondheid"/>
+        <code value="1"/>
+        <display value="Heel goed"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-ervaren-gezondheid"/>
+        <code value="2"/>
+        <display value="Goed"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-ervaren-gezondheid"/>
+        <code value="3"/>
+        <display value="Gaat wel"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-ervaren-gezondheid"/>
+        <code value="4"/>
+        <display value="Niet zo best"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-ervaren-gezondheid"/>
+        <code value="5"/>
+        <display value="Slecht"/>
+      </valueCoding>
+    </answerOption>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-323"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="323"/>
+      <display value="Voeding en eetgedrag"/>
+    </code>
+    <text value="Voeding en eetgedrag">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Beschrijving van voeding en eetgedrag, voedingsanamnese. Hier kan ook beschreven worden dat je een signaleringslijst hebt gebruikt zoals de ESP of de scoff."/>
+      </extension>
+    </text>
+    <type value="text"/>
+    <required value="false"/>
+    <repeats value="false"/>
+    <maxLength value="4000"/>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-496"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="496"/>
+      <display value="Melkvoeding op dit moment"/>
+    </code>
+    <text value="Melkvoeding op dit moment">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Vermeld de voeding van dit moment van de cliënt/jeugdige. Met kunstvoeding wordt volledige zuigelingenvoeding bedoeld. Met gemengde voeding wordt een combinatie van borst- en kunstvoeding bedoeld. Met 'anders' worden andere soorten melkvoeding bedoeld, zoals geitenmelk en koemelk-watermengsels. Met bijvoeding wordt fruit en andere vaste voeding bedoeld. Bijzonderheden vermelden bij &quot;Bijzonderheden voeding/eetgedrag&quot;."/>
+      </extension>
+    </text>
+    <type value="choice"/>
+    <required value="false"/>
+    <repeats value="false"/>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-melkvoeding"/>
+        <code value="1"/>
+        <display value="Borstvoeding"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-melkvoeding"/>
+        <code value="2"/>
+        <display value="Gemengde voeding"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-melkvoeding"/>
+        <code value="3"/>
+        <display value="Kunstvoeding"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-melkvoeding"/>
+        <code value="4"/>
+        <display value="Borstvoeding + bijvoeding"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-melkvoeding"/>
+        <code value="5"/>
+        <display value="Gemengde voeding + bijvoeding"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-melkvoeding"/>
+        <code value="6"/>
+        <display value="Kunstvoeding + bijvoeding"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-melkvoeding"/>
+        <code value="7"/>
+        <display value="Anders"/>
+      </valueCoding>
+    </answerOption>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1337"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="1337"/>
+      <display value="Vitamine K"/>
+    </code>
+    <text value="Vitamine K">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Vermeld of er vitamine K wordt gegeven aan de cliënt/jeugdige."/>
+      </extension>
+    </text>
+    <type value="boolean"/>
+    <required value="false"/>
+    <repeats value="false"/>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1338"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="1338"/>
+      <display value="Vitamine D"/>
+    </code>
+    <text value="Vitamine D">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Vermeld of er vitamine D wordt gegeven aan de cliënt/jeugdige."/>
+      </extension>
+    </text>
+    <type value="boolean"/>
+    <required value="false"/>
+    <repeats value="false"/>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1339"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="1339"/>
+      <display value="Toelichting vitamine"/>
+    </code>
+    <text value="Toelichting vitamine">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Vermeld eventueel een toelichting bij de vitamines zoals de hoeveelheid en de frequentie."/>
+      </extension>
+    </text>
+    <type value="text"/>
+    <required value="false"/>
+    <repeats value="false"/>
+    <maxLength value="4000"/>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-322"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="322"/>
+      <display value="Bijzonderheden slapen/waken"/>
+    </code>
+    <text value="Bijzonderheden slapen/waken">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Vermeld bijzonderheden slapen/waken zoals bij 0 tot 2 jaar als een kind op zijn buik te slapen wordt gelegd. Ook slaap-, waakritme, slaapwandelen, nachtmerries."/>
+      </extension>
+    </text>
+    <type value="text"/>
+    <required value="false"/>
+    <repeats value="false"/>
+    <maxLength value="4000"/>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1611"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="1611"/>
+      <display value="Bijzonderheden huilen"/>
+    </code>
+    <text value="Bijzonderheden huilen">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Beschrijving bijzonderheden huilgedrag en eventueel patroon."/>
+      </extension>
+    </text>
+    <type value="text"/>
+    <required value="false"/>
+    <repeats value="false"/>
+    <maxLength value="4000"/>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-179"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="179"/>
+      <display value="Bijzonderheden mondgedrag"/>
+    </code>
+    <text value="Bijzonderheden mondgedrag">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Vermeld bijzonderheden mondgedrag die naar aanleiding van onderzoek en/of anamnese zijn vastgesteld. Meerdere antwoorden mogelijk."/>
+      </extension>
+    </text>
+    <type value="choice"/>
+    <required value="false"/>
+    <repeats value="true"/>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-mondgedrag"/>
+        <code value="1"/>
+        <display value="Duim- en vingerzuigen"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-mondgedrag"/>
+        <code value="2"/>
+        <display value="Speengebruik"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-mondgedrag"/>
+        <code value="3"/>
+        <display value="Habitueel mondademen"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-mondgedrag"/>
+        <code value="4"/>
+        <display value="Afwijkende tongligging"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-mondgedrag"/>
+        <code value="5"/>
+        <display value="Slikproblemen"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-mondgedrag"/>
+        <code value="6"/>
+        <display value="Verstoorde sensomotoriek"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-mondgedrag"/>
+        <code value="7"/>
+        <display value="Anders"/>
+      </valueCoding>
+    </answerOption>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-188"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="188"/>
+      <display value="Poetsen gebit"/>
+    </code>
+    <text value="Poetsen gebit">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Vermeld of en hoevaak het gebit wordt gepoetst."/>
+      </extension>
+    </text>
+    <type value="choice"/>
+    <required value="false"/>
+    <repeats value="false"/>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-poetsen-gebit"/>
+        <code value="1"/>
+        <display value="N.v.t."/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-poetsen-gebit"/>
+        <code value="2"/>
+        <display value="Nooit"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-poetsen-gebit"/>
+        <code value="3"/>
+        <display value="Niet elke dag"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-poetsen-gebit"/>
+        <code value="4"/>
+        <display value="1x per dag"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-poetsen-gebit"/>
+        <code value="5"/>
+        <display value="2x per dag of vaker"/>
+      </valueCoding>
+    </answerOption>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-190"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="190"/>
+      <display value="Tandartsbezoek"/>
+    </code>
+    <text value="Tandartsbezoek">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Vermeld of en hoevaak de tandarts bezocht wordt."/>
+      </extension>
+    </text>
+    <type value="choice"/>
+    <required value="false"/>
+    <repeats value="false"/>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-tandartsbezoek"/>
+        <code value="1"/>
+        <display value="Niet"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-tandartsbezoek"/>
+        <code value="2"/>
+        <display value="Wel eens"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-tandartsbezoek"/>
+        <code value="3"/>
+        <display value="1x per jaar"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-tandartsbezoek"/>
+        <code value="4"/>
+        <display value="2x per jaar of vaker"/>
+      </valueCoding>
+    </answerOption>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1665"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="1665"/>
+      <display value="In de omgeving van de jeugdige wordt wel eens of dagelijks gerookt"/>
+    </code>
+    <text value="In de omgeving van de jeugdige wordt wel eens of dagelijks gerookt">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Er is 1 antwoord mogelijk. Het gaat hierbij om het roken in de omgeving van de jeugdige door ouders en/of belangrijke personen. Denk hierbij aan andere gezinsleden, familie, nieuwe partner, oppas etc."/>
+      </extension>
+    </text>
+    <type value="choice"/>
+    <required value="false"/>
+    <repeats value="false"/>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-roken-omgeving"/>
+        <code value="1"/>
+        <display value="Nee"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-roken-omgeving"/>
+        <code value="2"/>
+        <display value="Ja, door een of beide ouders"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-roken-omgeving"/>
+        <code value="3"/>
+        <display value="Ja, door andere belangrijke personen in de omgeving van de jeugdige"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-roken-omgeving"/>
+        <code value="4"/>
+        <display value="Ja, door ouder(s) en andere belangrijke personen in de omgeving"/>
+      </valueCoding>
+    </answerOption>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1666"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="1666"/>
+      <display value="Toelichting roken in omgeving van de jeugdige"/>
+    </code>
+    <text value="Toelichting roken in omgeving van de jeugdige">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Beschrijving rookgedrag."/>
+      </extension>
+    </text>
+    <type value="text"/>
+    <required value="false"/>
+    <repeats value="false"/>
+    <maxLength value="4000"/>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1667"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="1667"/>
+      <display value="Stoppen met roken interventie besproken"/>
+    </code>
+    <text value="Stoppen met roken interventie besproken">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Noteer, indien van toepassing, of begeleidingsmogelijkheden gericht op het stoppen met roken besproken zijn."/>
+      </extension>
+    </text>
+    <type value="boolean"/>
+    <required value="false"/>
+    <repeats value="false"/>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-330"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="330"/>
+      <display value="Bijzonderheden lichaamsbeweging"/>
+    </code>
+    <text value="Bijzonderheden lichaamsbeweging">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Vermeld bijzonderheden lichaamsbeweging zoals hoeveel de cliënt/jeugdige (wel of niet georganiseerd) aan beweging doet."/>
+      </extension>
+    </text>
+    <type value="text"/>
+    <required value="false"/>
+    <repeats value="false"/>
+    <maxLength value="4000"/>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1612"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="1612"/>
+      <display value="Leefstijl"/>
+    </code>
+    <text value="Leefstijl">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Beschrijving van de leefstijl. Vrijetijdsbesteding valt hier ook onder incl. sport / bewegen. Let op: slapen/waken en voeding hebben een apart registratieveld."/>
+      </extension>
+    </text>
+    <type value="text"/>
+    <required value="false"/>
+    <repeats value="false"/>
+    <maxLength value="4000"/>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1668"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="1668"/>
+      <display value="Jeugdige heeft zwemdiploma"/>
+    </code>
+    <text value="Jeugdige heeft zwemdiploma">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Noteer of de jeugdige een zwemdiploma heeft."/>
+      </extension>
+    </text>
+    <type value="choice"/>
+    <required value="false"/>
+    <repeats value="false"/>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-zwemdiploma"/>
+        <code value="1"/>
+        <display value="Ja"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-zwemdiploma"/>
+        <code value="2"/>
+        <display value="Nee, maar zit op zwemles/schoolzwemmen"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-zwemdiploma"/>
+        <code value="3"/>
+        <display value="Nee, zit (nog) niet op zwemles en heeft ook geen schoolzwemmen"/>
+      </valueCoding>
+    </answerOption>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-754"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="754"/>
+      <display value="Ontvangen (para)medische zorg"/>
+    </code>
+    <text value="Ontvangen (para)medische zorg">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Het gaat om professionele hulpverleners. Zorg die alleen de jeugdige betreft. Hier worden ook ziekenhuisopnames en operaties genoteerd."/>
+      </extension>
+    </text>
+    <type value="text"/>
+    <required value="false"/>
+    <repeats value="false"/>
+    <maxLength value="4000"/>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-152"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="152"/>
+      <display value="(Kinder-)ziekten"/>
+    </code>
+    <text value="(Kinder-)ziekten">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Vermeld hier ziekten en chronische ziekten."/>
+      </extension>
+    </text>
+    <type value="string"/>
+    <required value="false"/>
+    <repeats value="false"/>
+    <maxLength value="200"/>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-154"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="154"/>
+      <display value="Ongevallen"/>
+    </code>
+    <text value="Ongevallen">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Vermeld ongevallen die de cliënt/jeugdige heeft gehad."/>
+      </extension>
+    </text>
+    <type value="text"/>
+    <required value="false"/>
+    <repeats value="false"/>
+    <maxLength value="4000"/>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-155"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="155"/>
+      <display value="Medicijn gebruik"/>
+    </code>
+    <text value="Medicijn gebruik">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Vermeld welke medicijnen de cliënt/jeugdige gebruikt."/>
+      </extension>
+    </text>
+    <type value="text"/>
+    <required value="false"/>
+    <repeats value="false"/>
+    <maxLength value="4000"/>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1588"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="1588"/>
+      <display value="Medicijngebruik tijdens zwangerschap"/>
+    </code>
+    <text value="Medicijngebruik tijdens zwangerschap">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Vermeld welke medicijnen de zwangere cliënt/jeugdige gebruikt. Meerdere antwoorden mogelijk."/>
+      </extension>
+    </text>
+    <type value="choice"/>
+    <required value="false"/>
+    <repeats value="true"/>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-medicijngebruik-zwangerschap"/>
+        <code value="1"/>
+        <display value="Antibiotica"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-medicijngebruik-zwangerschap"/>
+        <code value="2"/>
+        <display value="Anti-Epileptica"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-medicijngebruik-zwangerschap"/>
+        <code value="3"/>
+        <display value="Anti-Hypertensiva"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-medicijngebruik-zwangerschap"/>
+        <code value="4"/>
+        <display value="Antimycotica"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-medicijngebruik-zwangerschap"/>
+        <code value="5"/>
+        <display value="Immunosuppresiva"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-medicijngebruik-zwangerschap"/>
+        <code value="6"/>
+        <display value="Insuline"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-medicijngebruik-zwangerschap"/>
+        <code value="7"/>
+        <display value="Middelen bij astma"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-medicijngebruik-zwangerschap"/>
+        <code value="8"/>
+        <display value="NSAID's"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-medicijngebruik-zwangerschap"/>
+        <code value="9"/>
+        <display value="Psychofarmaca"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-medicijngebruik-zwangerschap"/>
+        <code value="10"/>
+        <display value="Systemische corticosteroiden"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-medicijngebruik-zwangerschap"/>
+        <code value="11"/>
+        <display value="Thyreostatica"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-medicijngebruik-zwangerschap"/>
+        <code value="12"/>
+        <display value="Anders"/>
+      </valueCoding>
+    </answerOption>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-755"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="755"/>
+      <display value="Ingrijpende gebeurtenissen"/>
+    </code>
+    <text value="Ingrijpende gebeurtenissen">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Vermeld ingrijpende gebeurtenissen voor de cliënt/jeugdige, zijn gezin en de omgeving zoals overlijden van opa of oma of ernstige ziekte van ouder/verzorger."/>
+      </extension>
+    </text>
+    <type value="text"/>
+    <required value="false"/>
+    <repeats value="false"/>
+    <maxLength value="4000"/>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1578"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="1578"/>
+      <display value="A terme datum"/>
+    </code>
+    <text value="A terme datum">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Vermeld de datum waarop de zwangere cliënt/jeugdige is uitgerekend om te bevallen. Datum waarop de zwangerschap naar verwachting 40w 0d is (280 dagen)."/>
+      </extension>
+    </text>
+    <type value="dateTime"/>
+    <required value="false"/>
+    <repeats value="false"/>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1580"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="1580"/>
+      <display value="Kinkhoest doorgemaakt na zwangerschapsduur 12w6d"/>
+    </code>
+    <text value="Kinkhoest doorgemaakt na zwangerschapsduur 12w6d">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Vermeld of de cliënt/jeugdige kinkhoest heeft doorgemaakt na zwangerschapsduur 12 weken + 6 dagen. Het gaat hier om een zwangere cliënt/jeugdige zelf; niet om eventuele ouderkenmerken. Zie daarvoor rubriek 14 Zwangerschap."/>
+      </extension>
+    </text>
+    <type value="boolean"/>
+    <required value="false"/>
+    <repeats value="false"/>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1582"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="1582"/>
+      <display value="Kinkhoestvaccinatie gekregen na zwangerschapsduur 12w6d"/>
+    </code>
+    <text value="Kinkhoestvaccinatie gekregen na zwangerschapsduur 12w6d">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Vermeld of de cliënt/jeugdige kinkhoestvaccinatie heeft gekregen na zwangerschapsduur 12 weken + 6 dagen. Het gaat hier om een zwangere cliënt/jeugdige zelf; niet om eventuele ouderkenmerken. Zie daarvoor rubriek 14 Zwangerschap."/>
+      </extension>
+    </text>
+    <type value="boolean"/>
+    <required value="false"/>
+    <repeats value="false"/>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1585"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="1585"/>
+      <display value="Stollingsstoornis"/>
+    </code>
+    <text value="Stollingsstoornis">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Vermeld of de cliënt een stollingsstoornis heeft."/>
+      </extension>
+    </text>
+    <type value="boolean"/>
+    <required value="false"/>
+    <repeats value="false"/>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1586"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="1586"/>
+      <display value="Chronisch drager Hepatitis-B"/>
+    </code>
+    <text value="Chronisch drager Hepatitis-B">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Vermeld of de cliënt chronisch drager van Hepatitis-B is."/>
+      </extension>
+    </text>
+    <type value="boolean"/>
+    <required value="false"/>
+    <repeats value="false"/>
+  </item>
+</Questionnaire>

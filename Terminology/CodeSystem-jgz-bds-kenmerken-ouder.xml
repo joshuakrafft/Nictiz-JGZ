@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="jgz-bds-kenmerken-ouder" />
+  <text>
+    <status value="empty" />
+    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+  </text>
+  <url value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-kenmerken-ouder" />
+  <version value="0.1.0" />
+  <name value="Kenmerken ouder/verzorger" />
+  <title value="Kenmerken ouder/verzorger" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Codestelsel behorend bij BDS element 70 Kenmerken ouder/verzorger uit de Basisdataset JGZ. LET OP: de codes in dit codestelsel zijn volgnummers en dienen te worden vervangen door de officiele BDS-waardelijstcodes; de canonieke URL dient te worden vervangen door de OID van de betreffende BDS-waardelijst." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <caseSensitive value="true" />
+  <valueSet value="http://nictiz.nl/fhir/ValueSet/jgz-bds-kenmerken-ouder" />
+  <content value="complete" />
+  <count value="21" />
+  <concept>
+    <code value="01" />
+    <display value="Geen" />
+  </concept>
+  <concept>
+    <code value="02" />
+    <display value="Leeftijd moeder bij bevalling &lt; 20 jaar" />
+  </concept>
+  <concept>
+    <code value="03" />
+    <display value="Alcohol- of drugsgebruik in de zwangerschap" />
+  </concept>
+  <concept>
+    <code value="04" />
+    <display value="Geen gebruik JGZ of alleen vaccinaties" />
+  </concept>
+  <concept>
+    <code value="05" />
+    <display value="Opvoedingsprobleem" />
+  </concept>
+  <concept>
+    <code value="06" />
+    <display value="Zorgtekort" />
+  </concept>
+  <concept>
+    <code value="07" />
+    <display value="Ontbreken sociaal netwerk" />
+  </concept>
+  <concept>
+    <code value="08" />
+    <display value="Alleenstaande ouder" />
+  </concept>
+  <concept>
+    <code value="09" />
+    <display value="Langdurige werkloosheid/arbeidsongeschiktheid" />
+  </concept>
+  <concept>
+    <code value="10" />
+    <display value="Spreekt geen of nauwelijks Nederlands" />
+  </concept>
+  <concept>
+    <code value="11" />
+    <display value="Levend van minimum inkomen" />
+  </concept>
+  <concept>
+    <code value="12" />
+    <display value="Chronisch ziek" />
+  </concept>
+  <concept>
+    <code value="13" />
+    <display value="Verslaafd aan alcohol" />
+  </concept>
+  <concept>
+    <code value="14" />
+    <display value="Verslaafd aan drugs" />
+  </concept>
+  <concept>
+    <code value="15" />
+    <display value="Psychiatrische aandoening" />
+  </concept>
+  <concept>
+    <code value="16" />
+    <display value="Als kind zelf mishandeld" />
+  </concept>
+  <concept>
+    <code value="17" />
+    <display value="Laag of niet geletterd" />
+  </concept>
+  <concept>
+    <code value="18" />
+    <display value="Rookt" />
+  </concept>
+  <concept>
+    <code value="19" />
+    <display value="Verslaafd aan gokken" />
+  </concept>
+  <concept>
+    <code value="20" />
+    <display value="Chronisch drager Hepatitis-B" />
+  </concept>
+  <concept>
+    <code value="21" />
+    <display value="Anders" />
+  </concept>
+</CodeSystem>

@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
+  <id value="jgz-bds-R019-01"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/jgz-dob-QuestionnaireResponse"/>
+  </meta>
+  <questionnaire value="http://nictiz.nl/fhir/Questionnaire/jgz-bds-R019"/>
+  <status value="completed"/>
+  <subject>
+    <reference value="Patient/jgz-kind-voorbeeld-01"/>
+    <display value="Voorbeeld cliënt/jeugdige"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/jgz-contactmoment-voorbeeld-01"/>
+  </encounter>
+  <authored value="2026-07-13T11:00:00+02:00"/>
+  <source>
+    <reference value="PractitionerRole/jgz-verpleegkundige-01"/>
+    <display value="Jeugdverpleegkundige (voorbeeld)"/>
+  </source>
+  <item>
+    <linkId value="jgz-bds-element-748"/>
+    <text value="Anamnese"/>
+    <answer>
+      <valueString value="Het gaat goed met de zwangere jeugdige. Zij ervaart het aanstaand ouderschap als spannend maar positief. Moeder ondersteunt goed."/>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-514"/>
+    <text value="Ervaren gezondheid"/>
+    <answer>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-ervaren-gezondheid"/>
+        <code value="2"/>
+        <display value="Goed"/>
+      </valueCoding>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-323"/>
+    <text value="Voeding en eetgedrag"/>
+    <answer>
+      <valueString value="Gevarieerd eetpatroon. SCOFF afgenomen: geen aanwijzingen voor eetstoornis."/>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-496"/>
+    <text value="Melkvoeding op dit moment"/>
+    <answer>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-melkvoeding"/>
+        <code value="1"/>
+        <display value="Borstvoeding"/>
+      </valueCoding>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1337"/>
+    <text value="Vitamine K"/>
+    <answer>
+      <valueBoolean value="true"/>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1338"/>
+    <text value="Vitamine D"/>
+    <answer>
+      <valueBoolean value="true"/>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1339"/>
+    <text value="Toelichting vitamine"/>
+    <answer>
+      <valueString value="Vitamine K 150 mcg per dag; vitamine D 10 mcg (400 IE) per dag."/>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-322"/>
+    <text value="Bijzonderheden slapen/waken"/>
+    <answer>
+      <valueString value="Slaapt op de rug. Regelmatig slaap-waakritme."/>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1611"/>
+    <text value="Bijzonderheden huilen"/>
+    <answer>
+      <valueString value="Huilt met name in de avonduren, patroon passend bij leeftijd."/>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-179"/>
+    <text value="Bijzonderheden mondgedrag"/>
+    <answer>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-mondgedrag"/>
+        <code value="1"/>
+        <display value="Duim- en vingerzuigen"/>
+      </valueCoding>
+    </answer>
+    <answer>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-mondgedrag"/>
+        <code value="2"/>
+        <display value="Speengebruik"/>
+      </valueCoding>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-188"/>
+    <text value="Poetsen gebit"/>
+    <answer>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-poetsen-gebit"/>
+        <code value="5"/>
+        <display value="2x per dag of vaker"/>
+      </valueCoding>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-190"/>
+    <text value="Tandartsbezoek"/>
+    <answer>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-tandartsbezoek"/>
+        <code value="4"/>
+        <display value="2x per jaar of vaker"/>
+      </valueCoding>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1665"/>
+    <text value="In de omgeving van de jeugdige wordt wel eens of dagelijks gerookt"/>
+    <answer>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-roken-omgeving"/>
+        <code value="2"/>
+        <display value="Ja, door een of beide ouders"/>
+      </valueCoding>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1666"/>
+    <text value="Toelichting roken in omgeving van de jeugdige"/>
+    <answer>
+      <valueString value="Vader rookt buitenshuis, niet in aanwezigheid van de jeugdige."/>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1667"/>
+    <text value="Stoppen met roken interventie besproken"/>
+    <answer>
+      <valueBoolean value="true"/>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-330"/>
+    <text value="Bijzonderheden lichaamsbeweging"/>
+    <answer>
+      <valueString value="Wandelt dagelijks; deed voorheen aan zwemmen."/>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1612"/>
+    <text value="Leefstijl"/>
+    <answer>
+      <valueString value="Rustige leefstijl, veel thuis. Leest graag."/>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1668"/>
+    <text value="Jeugdige heeft zwemdiploma"/>
+    <answer>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-zwemdiploma"/>
+        <code value="1"/>
+        <display value="Ja"/>
+      </valueCoding>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-754"/>
+    <text value="Ontvangen (para)medische zorg"/>
+    <answer>
+      <valueString value="Onder controle bij verloskundige. Geen ziekenhuisopnames."/>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-152"/>
+    <text value="(Kinder-)ziekten"/>
+    <answer>
+      <valueString value="Waterpokken op 4-jarige leeftijd doorgemaakt."/>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-154"/>
+    <text value="Ongevallen"/>
+    <answer>
+      <valueString value="Geen ongevallen bekend."/>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-155"/>
+    <text value="Medicijn gebruik"/>
+    <answer>
+      <valueString value="Zie medicijngebruik tijdens zwangerschap."/>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1588"/>
+    <text value="Medicijngebruik tijdens zwangerschap"/>
+    <answer>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-medicijngebruik-zwangerschap"/>
+        <code value="6"/>
+        <display value="Insuline"/>
+      </valueCoding>
+    </answer>
+    <answer>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-medicijngebruik-zwangerschap"/>
+        <code value="7"/>
+        <display value="Middelen bij astma"/>
+      </valueCoding>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-755"/>
+    <text value="Ingrijpende gebeurtenissen"/>
+    <answer>
+      <valueString value="Overlijden van grootvader (moederszijde) vorig jaar."/>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1578"/>
+    <text value="A terme datum"/>
+    <answer>
+      <valueDateTime value="2026-11-20"/>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1580"/>
+    <text value="Kinkhoest doorgemaakt na zwangerschapsduur 12w6d"/>
+    <answer>
+      <valueBoolean value="false"/>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1582"/>
+    <text value="Kinkhoestvaccinatie gekregen na zwangerschapsduur 12w6d"/>
+    <answer>
+      <valueBoolean value="true"/>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1585"/>
+    <text value="Stollingsstoornis"/>
+    <answer>
+      <valueBoolean value="false"/>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-1586"/>
+    <text value="Chronisch drager Hepatitis-B"/>
+    <answer>
+      <valueBoolean value="false"/>
+    </answer>
+  </item>
+</QuestionnaireResponse>

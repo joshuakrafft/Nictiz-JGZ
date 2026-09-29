@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="ext-BDS-VormActiviteit"/>
+  <text>
+    <status value="empty"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+  </text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/ext-BDS-VormActiviteit"/>
+  <version value="0.1.0"/>
+  <name value="extBDSVormActiviteit"/>
+  <title value="ext BDS VormActiviteit"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-07-13"/>
+  <publisher value="TODO: publicerende organisatie"/>
+  <contact>
+    <name value="TODO: publicerende organisatie"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://TODO.nl"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Vorm van de activiteit of het contactmoment (bijvoorbeeld beeldbellen, telefonisch, huisbezoek) zoals vastgelegd in de BDS JGZ. Deze waarde wordt vastgelegd naast de best passende Encounter.class-code, omdat de BDS-vorm niet exact op de FHIR ActEncounterCode-waardelijst past."/>
+  <purpose value="Deze extensie bewaart de volledige BDS-code voor het concept &apos;Vorm activiteit&apos; (BDS 1577) uit rubriek R018 Activiteit, naast de best passende standaardwaarde op het bijbehorende FHIR-element. Zo blijft de granulaire brondata behouden waar het FHIR-kernveld die niet exact kan weergeven."/>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+  <fhirVersion value="4.0.1"/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="Encounter"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+      <short value="Vorm van de activiteit/contactmoment volgens de BDS"/>
+      <definition value="Vorm van de activiteit of het contactmoment (bijvoorbeeld beeldbellen, telefonisch, huisbezoek) zoals vastgelegd in de BDS JGZ. Deze waarde wordt vastgelegd naast de best passende Encounter.class-code, omdat de BDS-vorm niet exact op de FHIR ActEncounterCode-waardelijst past."/>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension"/>
+      <max value="0"/>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-BDS-VormActiviteit"/>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]"/>
+      <short value="Vorm van de activiteit/contactmoment volgens de BDS"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="http://TODO.nl/fhir/ValueSet/bds-vorm-activiteit"/>
+      </binding>
+      <mapping>
+        <identity value="jgz-dob-dataset"/>
+        <map value="1577"/>
+        <comment value="Vorm activiteit"/>
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

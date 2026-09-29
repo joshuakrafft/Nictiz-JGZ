@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
+  <id value="jgz-bds-R012-01"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/jgz-dob-QuestionnaireResponse"/>
+  </meta>
+  <questionnaire value="http://nictiz.nl/fhir/Questionnaire/jgz-bds-R012"/>
+  <status value="completed"/>
+  <subject>
+    <reference value="Patient/jgz-kind-voorbeeld-01"/>
+    <display value="Voorbeeld cliënt/jeugdige"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/jgz-contactmoment-voorbeeld-01"/>
+  </encounter>
+  <authored value="2026-07-13T10:30:00+02:00"/>
+  <source>
+    <reference value="PractitionerRole/jgz-verpleegkundige-01"/>
+    <display value="Jeugdverpleegkundige (voorbeeld)"/>
+  </source>
+  <!-- G019 (herhaling 1): Diabetes bij moeder en moeder van moeder -->
+  <item>
+    <linkId value="jgz-bds-groep-G019"/>
+    <text value="Erfelijke factor(en) in de familie"/>
+    <item>
+      <linkId value="jgz-bds-element-80"/>
+      <text value="Erfelijk bepaalde ziekte in de familie"/>
+      <answer>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="8"/>
+          <display value="Diabetes"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="jgz-bds-element-81"/>
+      <text value="Familielid"/>
+      <answer>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-familielid"/>
+          <code value="2"/>
+          <display value="Moeder"/>
+        </valueCoding>
+      </answer>
+      <answer>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-familielid"/>
+          <code value="8"/>
+          <display value="Moeder van moeder"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="jgz-bds-element-1608"/>
+      <text value="Toelichting erfelijke factor in de familie"/>
+      <answer>
+        <valueString value="Diabetes type 2, moeder gediagnosticeerd op 45-jarige leeftijd."/>
+      </answer>
+    </item>
+  </item>
+  <!-- G019 (herhaling 2): Astma/COPD bij vader -->
+  <item>
+    <linkId value="jgz-bds-groep-G019"/>
+    <text value="Erfelijke factor(en) in de familie"/>
+    <item>
+      <linkId value="jgz-bds-element-80"/>
+      <text value="Erfelijk bepaalde ziekte in de familie"/>
+      <answer>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="6"/>
+          <display value="Astma/COPD"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="jgz-bds-element-81"/>
+      <text value="Familielid"/>
+      <answer>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-familielid"/>
+          <code value="1"/>
+          <display value="Vader"/>
+        </valueCoding>
+      </answer>
+    </item>
+  </item>
+  <!-- G020 (herhaling 1): Rookt - moeder -->
+  <item>
+    <linkId value="jgz-bds-groep-G020"/>
+    <text value="Kenmerken ouder/verzorger"/>
+    <item>
+      <linkId value="jgz-bds-element-70"/>
+      <text value="Kenmerken ouder/verzorger"/>
+      <answer>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-kenmerken-ouder"/>
+          <code value="18"/>
+          <display value="Rookt"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="jgz-bds-element-1200"/>
+      <text value="Vader/moeder"/>
+      <answer>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-ouder"/>
+          <code value="2"/>
+          <display value="Moeder"/>
+        </valueCoding>
+      </answer>
+    </item>
+  </item>
+  <!-- G020 (herhaling 2): Spreekt geen of nauwelijks Nederlands - vader -->
+  <item>
+    <linkId value="jgz-bds-groep-G020"/>
+    <text value="Kenmerken ouder/verzorger"/>
+    <item>
+      <linkId value="jgz-bds-element-70"/>
+      <text value="Kenmerken ouder/verzorger"/>
+      <answer>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-kenmerken-ouder"/>
+          <code value="10"/>
+          <display value="Spreekt geen of nauwelijks Nederlands"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="jgz-bds-element-1200"/>
+      <text value="Vader/moeder"/>
+      <answer>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-ouder"/>
+          <code value="1"/>
+          <display value="Vader"/>
+        </valueCoding>
+      </answer>
+    </item>
+  </item>
+  <!-- Lengte biologische ouders -->
+  <item>
+    <linkId value="jgz-bds-element-238"/>
+    <text value="Lengte biologische moeder"/>
+    <answer>
+      <valueQuantity>
+        <value value="168.5"/>
+        <unit value="cm"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="cm"/>
+      </valueQuantity>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-239"/>
+    <text value="Methode lengtemeting moeder"/>
+    <answer>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-methode-lengtemeting"/>
+        <code value="2"/>
+        <display value="Anamnestisch"/>
+      </valueCoding>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-240"/>
+    <text value="Lengte biologische vader"/>
+    <answer>
+      <valueQuantity>
+        <value value="182.0"/>
+        <unit value="cm"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="cm"/>
+      </valueQuantity>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-241"/>
+    <text value="Methode lengtemeting vader"/>
+    <answer>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-methode-lengtemeting"/>
+        <code value="1"/>
+        <display value="Gemeten"/>
+      </valueCoding>
+    </answer>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-808"/>
+    <text value="Bijzonderheden lengte ouders"/>
+    <answer>
+      <valueString value="Geen bijzonderheden; target height betrouwbaar te bepalen."/>
+    </answer>
+  </item>
+</QuestionnaireResponse>

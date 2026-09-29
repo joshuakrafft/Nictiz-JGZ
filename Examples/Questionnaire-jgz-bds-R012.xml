@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Questionnaire xmlns="http://hl7.org/fhir">
+  <id value="jgz-bds-R012"/>
+  <url value="http://nictiz.nl/fhir/Questionnaire/jgz-bds-R012"/>
+  <version value="0.1.0"/>
+  <name value="JgzBdsR012ErfelijkeBelastingEnOuderkenmerken"/>
+  <title value="R012 Erfelijke belasting en ouderkenmerken"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <subjectType value="Patient"/>
+  <date value="2026-07-13"/>
+  <publisher value="TODO: publicerende organisatie"/>
+  <description value="Vastleggen van ziekten en afwijkingen, die in genetisch opzicht voor cliënt/jeugdige van belang kunnen zijn. Concept-Questionnaire voor rubriek R012 van de Basisdataset (BDS) JGZ, ten behoeve van het Dossieroverdrachtsbericht (DOB)."/>
+  <code>
+    <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-rubrieken"/>
+    <code value="R012"/>
+    <display value="Erfelijke belasting en ouderkenmerken"/>
+  </code>
+  <item>
+    <linkId value="jgz-bds-groep-G019"/>
+    <text value="Erfelijke factor(en) in de familie"/>
+    <type value="group"/>
+    <repeats value="true"/>
+    <item>
+      <linkId value="jgz-bds-element-80"/>
+      <code>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+        <code value="80"/>
+        <display value="Erfelijk bepaalde ziekte in de familie"/>
+      </code>
+      <text value="Erfelijk bepaalde ziekte in de familie">
+        <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+          <valueMarkdown value="Vermeld hier erfelijke ziekten en afwijkingen, zowel van de zijde van de biologische vader als - moeder en de rest van de biologische familie, die in genetisch opzicht voor de cliënt/jeugdige van belang kunnen zijn."/>
+        </extension>
+      </text>
+      <type value="choice"/>
+      <required value="true"/>
+      <repeats value="false"/>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="1"/>
+          <display value="Geen"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="2"/>
+          <display value="Erfelijke aangeboren afwijking"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="3"/>
+          <display value="ADHD"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="4"/>
+          <display value="ASS"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="5"/>
+          <display value="Allergie"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="6"/>
+          <display value="Astma/COPD"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="7"/>
+          <display value="Allergie / astma / eczeem"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="8"/>
+          <display value="Diabetes"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="9"/>
+          <display value="Dyslexie"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="10"/>
+          <display value="Eczeem"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="11"/>
+          <display value="Epilepsie"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="12"/>
+          <display value="Hart- en vaatziekten &lt; 50 jaar; plotseling overlijden"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="13"/>
+          <display value="Heupafwijking"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="14"/>
+          <display value="Erfelijke huidafwijking"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="15"/>
+          <display value="Oogafwijking"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="16"/>
+          <display value="Persistente spraak-taalstoornis en/of leerproblemen"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="17"/>
+          <display value="Overige psychiatrische aandoeningen"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="18"/>
+          <display value="Scoliose"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="19"/>
+          <display value="Gehoorverlies op jongere leeftijd"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="20"/>
+          <display value="Spierziekte"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="21"/>
+          <display value="Verstandelijke beperking"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="22"/>
+          <display value="Sikkelcelanemie"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="23"/>
+          <display value="Zindelijkheidsproblematiek"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-erfelijke-ziekte"/>
+          <code value="24"/>
+          <display value="Anders"/>
+        </valueCoding>
+      </answerOption>
+    </item>
+    <item>
+      <linkId value="jgz-bds-element-81"/>
+      <code>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+        <code value="81"/>
+        <display value="Familielid"/>
+      </code>
+      <text value="Familielid">
+        <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+          <valueMarkdown value="Vermeld per ziekte of afwijking bij wie deze voorkomt."/>
+        </extension>
+      </text>
+      <type value="choice"/>
+      <required value="true"/>
+      <repeats value="true"/>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-familielid"/>
+          <code value="1"/>
+          <display value="Vader"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-familielid"/>
+          <code value="2"/>
+          <display value="Moeder"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-familielid"/>
+          <code value="3"/>
+          <display value="Broer"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-familielid"/>
+          <code value="4"/>
+          <display value="Zus"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-familielid"/>
+          <code value="5"/>
+          <display value="Vader van vader"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-familielid"/>
+          <code value="6"/>
+          <display value="Moeder van vader"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-familielid"/>
+          <code value="7"/>
+          <display value="Vader van moeder"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-familielid"/>
+          <code value="8"/>
+          <display value="Moeder van moeder"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-familielid"/>
+          <code value="9"/>
+          <display value="Broer van vader"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-familielid"/>
+          <code value="10"/>
+          <display value="Broer van moeder"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-familielid"/>
+          <code value="11"/>
+          <display value="Zus van vader"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-familielid"/>
+          <code value="12"/>
+          <display value="Zus van moeder"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-familielid"/>
+          <code value="13"/>
+          <display value="3e graad"/>
+        </valueCoding>
+      </answerOption>
+    </item>
+    <item>
+      <linkId value="jgz-bds-element-1608"/>
+      <code>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+        <code value="1608"/>
+        <display value="Toelichting erfelijke factor in de familie"/>
+      </code>
+      <text value="Toelichting erfelijke factor in de familie"/>
+      <type value="string"/>
+      <required value="false"/>
+      <repeats value="false"/>
+      <maxLength value="200"/>
+    </item>
+  </item>
+  <item>
+    <linkId value="jgz-bds-groep-G020"/>
+    <text value="Kenmerken ouder/verzorger"/>
+    <type value="group"/>
+    <repeats value="true"/>
+    <item>
+      <linkId value="jgz-bds-element-70"/>
+      <code>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+        <code value="70"/>
+        <display value="Kenmerken ouder/verzorger"/>
+      </code>
+      <text value="Kenmerken ouder/verzorger">
+        <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+          <valueMarkdown value="Vermeld de kenmerken van de ouder die van invloed kunnen zijn op de cliënt/jeugdige. Meerdere opties zijn mogelijk (leg elk kenmerk vast als aparte herhaling van deze groep, samen met bij wie het kenmerk zich voordoet)."/>
+        </extension>
+      </text>
+      <type value="choice"/>
+      <required value="true"/>
+      <repeats value="false"/>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-kenmerken-ouder"/>
+          <code value="1"/>
+          <display value="Geen"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-kenmerken-ouder"/>
+          <code value="2"/>
+          <display value="Leeftijd moeder bij bevalling &lt; 20 jaar"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-kenmerken-ouder"/>
+          <code value="3"/>
+          <display value="Alcohol- of drugsgebruik in de zwangerschap"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-kenmerken-ouder"/>
+          <code value="4"/>
+          <display value="Geen gebruik JGZ of alleen vaccinaties"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-kenmerken-ouder"/>
+          <code value="5"/>
+          <display value="Opvoedingsprobleem"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-kenmerken-ouder"/>
+          <code value="6"/>
+          <display value="Zorgtekort"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-kenmerken-ouder"/>
+          <code value="7"/>
+          <display value="Ontbreken sociaal netwerk"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-kenmerken-ouder"/>
+          <code value="8"/>
+          <display value="Alleenstaande ouder"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-kenmerken-ouder"/>
+          <code value="9"/>
+          <display value="Langdurige werkloosheid/arbeidsongeschiktheid"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-kenmerken-ouder"/>
+          <code value="10"/>
+          <display value="Spreekt geen of nauwelijks Nederlands"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-kenmerken-ouder"/>
+          <code value="11"/>
+          <display value="Levend van minimum inkomen"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-kenmerken-ouder"/>
+          <code value="12"/>
+          <display value="Chronisch ziek"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-kenmerken-ouder"/>
+          <code value="13"/>
+          <display value="Verslaafd aan alcohol"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-kenmerken-ouder"/>
+          <code value="14"/>
+          <display value="Verslaafd aan drugs"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-kenmerken-ouder"/>
+          <code value="15"/>
+          <display value="Psychiatrische aandoening"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-kenmerken-ouder"/>
+          <code value="16"/>
+          <display value="Als kind zelf mishandeld"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-kenmerken-ouder"/>
+          <code value="17"/>
+          <display value="Laag of niet geletterd"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-kenmerken-ouder"/>
+          <code value="18"/>
+          <display value="Rookt"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-kenmerken-ouder"/>
+          <code value="19"/>
+          <display value="Verslaafd aan gokken"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-kenmerken-ouder"/>
+          <code value="20"/>
+          <display value="Chronisch drager Hepatitis-B"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-kenmerken-ouder"/>
+          <code value="21"/>
+          <display value="Anders"/>
+        </valueCoding>
+      </answerOption>
+    </item>
+    <item>
+      <linkId value="jgz-bds-element-1200"/>
+      <code>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+        <code value="1200"/>
+        <display value="Vader/moeder"/>
+      </code>
+      <text value="Vader/moeder">
+        <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+          <valueMarkdown value="Vermeld per kenmerk of deze zich voordoet bij de vader, bij de moeder of allebei (bij allebei: beide codes vastleggen)."/>
+        </extension>
+      </text>
+      <type value="choice"/>
+      <required value="true"/>
+      <repeats value="false"/>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-ouder"/>
+          <code value="1"/>
+          <display value="Vader"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-ouder"/>
+          <code value="2"/>
+          <display value="Moeder"/>
+        </valueCoding>
+      </answerOption>
+    </item>
+  </item>
+  <item>
+    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption">
+      <valueCoding>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="cm"/>
+        <display value="cm"/>
+      </valueCoding>
+    </extension>
+    <linkId value="jgz-bds-element-238"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="238"/>
+      <display value="Lengte biologische moeder"/>
+    </code>
+    <text value="Lengte biologische moeder">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Vermeld de lengte van de biologische moeder in cm, met 1 cijfer achter de komma. Conformance: C (conditioneel)."/>
+      </extension>
+    </text>
+    <type value="quantity"/>
+    <required value="false"/>
+    <repeats value="false"/>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-239"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="239"/>
+      <display value="Methode lengtemeting moeder"/>
+    </code>
+    <text value="Methode lengtemeting moeder"/>
+    <type value="choice"/>
+    <enableWhen>
+      <question value="jgz-bds-element-238"/>
+      <operator value="exists"/>
+      <answerBoolean value="true"/>
+    </enableWhen>
+    <required value="false"/>
+    <repeats value="false"/>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-methode-lengtemeting"/>
+        <code value="1"/>
+        <display value="Gemeten"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-methode-lengtemeting"/>
+        <code value="2"/>
+        <display value="Anamnestisch"/>
+      </valueCoding>
+    </answerOption>
+  </item>
+  <item>
+    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption">
+      <valueCoding>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="cm"/>
+        <display value="cm"/>
+      </valueCoding>
+    </extension>
+    <linkId value="jgz-bds-element-240"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="240"/>
+      <display value="Lengte biologische vader"/>
+    </code>
+    <text value="Lengte biologische vader">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Vermeld de lengte van de biologische vader in cm, met 1 cijfer achter de komma. Conformance: C (conditioneel)."/>
+      </extension>
+    </text>
+    <type value="quantity"/>
+    <required value="false"/>
+    <repeats value="false"/>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-241"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="241"/>
+      <display value="Methode lengtemeting vader"/>
+    </code>
+    <text value="Methode lengtemeting vader"/>
+    <type value="choice"/>
+    <enableWhen>
+      <question value="jgz-bds-element-240"/>
+      <operator value="exists"/>
+      <answerBoolean value="true"/>
+    </enableWhen>
+    <required value="false"/>
+    <repeats value="false"/>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-methode-lengtemeting"/>
+        <code value="1"/>
+        <display value="Gemeten"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-methode-lengtemeting"/>
+        <code value="2"/>
+        <display value="Anamnestisch"/>
+      </valueCoding>
+    </answerOption>
+  </item>
+  <item>
+    <linkId value="jgz-bds-element-808"/>
+    <code>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-elementen"/>
+      <code value="808"/>
+      <display value="Bijzonderheden lengte ouders"/>
+    </code>
+    <text value="Bijzonderheden lengte ouders">
+      <extension url="http://hl7.org/fhir/StructureDefinition/rendering-markdown">
+        <valueMarkdown value="Vermeld bijzonderheden zoals groeibeperking door operatie, ziekte, waardoor target height voor de cliënt/jeugdige niet betrouwbaar is."/>
+      </extension>
+    </text>
+    <type value="text"/>
+    <required value="false"/>
+    <repeats value="false"/>
+    <maxLength value="4000"/>
+  </item>
+</Questionnaire>

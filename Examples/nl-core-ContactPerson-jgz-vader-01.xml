@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<RelatedPerson xmlns="http://hl7.org/fhir">
+  <id value="nl-core-ContactPerson-jgz-vader-01" />
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactPerson" />
+  </meta>
+  <patient>
+    <reference value="Patient/nl-core-Patient-jgz-01" />
+    <display value="Sanne de Wit" />
+  </patient>
+  <relationship>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode" />
+      <code value="NFTH" />
+      <display value="natural father" />
+    </coding>
+  </relationship>
+  <name>
+    <use value="official" />
+    <family value="de Wit" />
+    <given value="Peter" />
+  </name>
+  <gender value="male" />
+</RelatedPerson>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="jgz-bds-methode-lengtemeting" />
+  <text>
+    <status value="empty" />
+    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+  </text>
+  <url value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-methode-lengtemeting" />
+  <version value="0.1.0" />
+  <name value="Methode lengtemeting" />
+  <title value="Methode lengtemeting" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Codestelsel behorend bij BDS element 239 Methode lengtemeting uit de Basisdataset JGZ. LET OP: de codes in dit codestelsel zijn volgnummers en dienen te worden vervangen door de officiele BDS-waardelijstcodes; de canonieke URL dient te worden vervangen door de OID van de betreffende BDS-waardelijst." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <caseSensitive value="true" />
+  <valueSet value="http://nictiz.nl/fhir/ValueSet/jgz-bds-methode-lengtemeting" />
+  <content value="complete" />
+  <count value="2" />
+  <concept>
+    <code value="01" />
+    <display value="Gemeten" />
+  </concept>
+  <concept>
+    <code value="02" />
+    <display value="Anamnestisch" />
+  </concept>
+</CodeSystem>

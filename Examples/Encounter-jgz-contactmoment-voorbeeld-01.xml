@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="jgz-contactmoment-voorbeeld-01"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/jgz-dob-Encounter"/>
+  </meta>
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-BDS-VormActiviteit">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-vorm-activiteit"/>
+        <code value="3"/>
+        <display value="Face-to-face, anders dan huisbezoek of inloopspreekuur"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-BDS-StatusActiviteit">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-status-activiteit"/>
+        <code value="1"/>
+        <display value="Gerealiseerd"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <identifier>
+    <system value="http://TODO.nl/fhir/NamingSystem/jgz-activiteit-id"/>
+    <value value="CM-2026-0713-0001"/>
+  </identifier>
+  <status value="finished"/>
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+    <code value="AMB"/>
+    <display value="ambulatory"/>
+  </class>
+  <type>
+    <coding>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-soort-activiteit"/>
+      <code value="5"/>
+      <display value="Contact 1 tot 4 jaar"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/jgz-kind-voorbeeld-01"/>
+    <display value="Voorbeeld cliënt/jeugdige"/>
+  </subject>
+  <participant>
+    <individual>
+      <reference value="PractitionerRole/jgz-verpleegkundige-01"/>
+      <display value="Jeugdverpleegkundige (voorbeeld)"/>
+    </individual>
+  </participant>
+  <participant>
+    <type>
+      <coding>
+        <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-begeleider"/>
+        <code value="1"/>
+        <display value="(Biologische of adoptief) Moeder"/>
+      </coding>
+    </type>
+    <individual>
+      <reference value="RelatedPerson/jgz-moeder-voorbeeld-01"/>
+      <display value="Moeder (voorbeeld)"/>
+    </individual>
+  </participant>
+  <period>
+    <start value="2026-07-13T11:00:00+02:00"/>
+  </period>
+  <reasonCode>
+    <coding>
+      <system value="http://nictiz.nl/fhir/CodeSystem/jgz-bds-indicatie-activiteit"/>
+      <code value="25"/>
+      <display value="Voeding en eetgedrag"/>
+    </coding>
+  </reasonCode>
+</Encounter>

@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="nl-core-Observation-jgz-03"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Observation"/>
+  </meta>
+  <!-- <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <tbody>
+          <tr>
+            <th>Observatie</th>
+            <td>SDQ totaal score (BDS 1116)</td>
+          </tr>
+          <tr>
+            <th>Status</th>
+            <td>final</td>
+          </tr>
+          <tr>
+            <th>Categorie</th>
+            <td>survey</td>
+          </tr>
+          <tr>
+            <th>Jeugdige</th>
+            <td>Jeugdige (voorbeeld)</td>
+          </tr>
+          <tr>
+            <th>Contactmoment</th>
+            <td>Contact 1 tot 4 jaar, 12-03-2026</td>
+          </tr>
+          <tr>
+            <th>Waarde</th>
+            <td>11</td>
+          </tr>
+          <tr>
+            <th>Score emotionele problemen</th>
+            <td>3</td>
+          </tr>
+          <tr>
+            <th>Score gedragsproblemen</th>
+            <td>2</td>
+          </tr>
+          <tr>
+            <th>Score problemen leeftijdsgenoten</th>
+            <td>1</td>
+          </tr>
+          <tr>
+            <th>Score hyperactiviteit</th>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th>Score pro-sociaal gedrag</th>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th>SDQ impactscore</th>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th>1. Houdt rekening met gevoelens van anderen</th>
+            <td>Zeker waar</td>
+          </tr>
+          <tr>
+            <th>2. Is rusteloos</th>
+            <td>Een beetje waar</td>
+          </tr>
+          <tr>
+            <th>3. Klaagt vaak over hoofdpijn</th>
+            <td>Niet waar</td>
+          </tr>
+          <tr>
+            <th>Opmerking (BDS 1103)</th>
+            <td>Ouders maken zich weinig zorgen.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text> -->
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="survey"/>
+      <display value="Survey"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="urn:oid:2.16.840.1.113883.2.4.4.40.267"/>
+      <code value="1116"/>
+      <display value="SDQ totaal score"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/nl-core-Patient-jgz-01"/>
+    <display value="Jeugdige (voorbeeld)"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/jgz-dob-Encounter-jgz-01"/>
+    <display value="Contact 1 tot 4 jaar, 12-03-2026"/>
+  </encounter>
+  <effectiveDateTime value="2026-03-12T10:30:00+01:00"/>
+  <performer>
+    <reference value="PractitionerRole/nl-core-HealthProfessional-PractitionerRole-jgz-01"/>
+    <display value="Jeugdarts (voorbeeld)"/>
+  </performer>
+  <valueInteger value="11"/>
+  <note>
+    <text value="Ouders maken zich weinig zorgen."/>
+  </note>
+  <component>
+    <code>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.4.40.267"/>
+        <code value="1112"/>
+        <display value="Score emotionele problemen"/>
+      </coding>
+    </code>
+    <valueInteger value="3"/>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.4.40.267"/>
+        <code value="1113"/>
+        <display value="Score gedragsproblemen"/>
+      </coding>
+    </code>
+    <valueInteger value="2"/>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.4.40.267"/>
+        <code value="1114"/>
+        <display value="Score problemen leeftijdsgenoten"/>
+      </coding>
+    </code>
+    <valueInteger value="1"/>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.4.40.267"/>
+        <code value="1115"/>
+        <display value="Score hyperactiviteit"/>
+      </coding>
+    </code>
+    <valueInteger value="5"/>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.4.40.267"/>
+        <code value="1117"/>
+        <display value="Score pro-sociaal gedrag"/>
+      </coding>
+    </code>
+    <valueInteger value="8"/>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.4.40.267"/>
+        <code value="1447"/>
+        <display value="SDQ impactscore"/>
+      </coding>
+    </code>
+    <valueInteger value="0"/>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.4.40.267"/>
+        <code value="1078"/>
+        <display value="1. Houdt rekening met gevoelens van anderen"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.4.40.368"/>
+        <code value="3"/>
+        <display value="Zeker waar"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.4.40.267"/>
+        <code value="1079"/>
+        <display value="2. Is rusteloos"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.4.40.368"/>
+        <code value="2"/>
+        <display value="Een beetje waar"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.4.40.267"/>
+        <code value="1080"/>
+        <display value="3. Klaagt vaak over hoofdpijn"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.2.4.4.40.368"/>
+        <code value="1"/>
+        <display value="Niet waar"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+</Observation>

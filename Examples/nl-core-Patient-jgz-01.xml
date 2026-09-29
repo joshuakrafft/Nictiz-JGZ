@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="nl-core-Patient-jgz-01" />
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+  </meta>
+  <identifier>
+    <system value="http://fhir.nl/fhir/NamingSystem/bsn" />
+    <value value="999911120" />
+  </identifier>
+  <name>
+    <use value="official" />
+    <family value="de Wit" />
+    <given value="Sanne" />
+  </name>
+  <gender value="female" />
+  <birthDate value="2026-01-12" />
+</Patient>

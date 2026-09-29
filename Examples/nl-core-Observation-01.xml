@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="nl-core-Observation-jgz-01"/>
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Observation"/>
+  </meta>
+  <!-- <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table>
+        <tbody>
+          <tr>
+            <th>Observatie</th>
+            <td>Geboortegewicht (BDS 110; LOINC 8339-4)</td>
+          </tr>
+          <tr>
+            <th>Status</th>
+            <td>final</td>
+          </tr>
+          <tr>
+            <th>Categorie</th>
+            <td>vital-signs</td>
+          </tr>
+          <tr>
+            <th>Jeugdige</th>
+            <td>Jeugdige (voorbeeld)</td>
+          </tr>
+          <tr>
+            <th>Tijdstip</th>
+            <td>15-09-2024 04:12</td>
+          </tr>
+          <tr>
+            <th>Waarde</th>
+            <td>3450 g</td>
+          </tr>
+          <tr>
+            <th>Contactmoment</th>
+            <td>geen (R016 is niet contactgebonden)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </text> -->
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="vital-signs"/>
+      <display value="Vital Signs"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="urn:oid:2.16.840.1.113883.2.4.4.40.267"/>
+      <code value="110"/>
+      <display value="Geboortegewicht"/>
+    </coding>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="8339-4"/>
+      <display value="Birth weight Measured"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/nl-core-Patient-jgz-01"/>
+    <display value="Jeugdige (voorbeeld)"/>
+  </subject>
+  <effectiveDateTime value="2024-09-15T04:12:00+02:00"/>
+  <valueQuantity>
+    <value value="3450"/>
+    <unit value="g"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="g"/>
+  </valueQuantity>
+</Observation>
